@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEventSheet</name>
+    <events>
+        <variable constant="0" name="directionLeft" sid="3650356626283203" static="0" type="number">0</variable>
+        <variable constant="0" name="directionRight" sid="2910758584446361" static="0" type="number">1</variable>
+        <variable constant="0" name="playerHealth" sid="4530368819741246" static="0" type="number">100</variable>
+        <event-block sid="6287266488576306">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6257189773717238" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7403312855348956" type="healthIndicator">
+                    <param id="0" name="Text">&quot;Здоровье :&quot; &amp; playerHealth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7490416879556734">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="458400658342364" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7900155512046355">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5109716723972489" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="9533311913531083" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4965682763436048">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8290937301534552" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="1733957882947617" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5212138830364441">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="7161381252746034" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8026656813560639" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">directionLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4186914949102065">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1053154325448874" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1511716240035716" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">directionRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
