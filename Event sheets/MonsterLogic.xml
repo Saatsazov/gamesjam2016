@@ -69,7 +69,7 @@
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="5407586940422499" type="enemyMeeleAttack">
-                    <param id="0" name="X">monster1.X - monster1.Width</param>
+                    <param id="0" name="X">monster1.X - monster1.Width/2</param>
                     <param id="1" name="Y">monster1.Y</param>
                 </action>
             </actions>
@@ -120,6 +120,10 @@
                         <action disabled="1" id="-12" name="Subtract from" sid="3948365139811857" type="player">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">monster1Damage</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1775682297679123" type="monster1">
+                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -212,6 +216,10 @@
                             <param id="0" name="Instance variable">direction</param>
                             <param id="1" name="Value">directionRight</param>
                         </action>
+                        <action id="4" name="Set animation" sid="9521867031502435" type="monster1">
+                            <param id="0" name="Animation">&quot;go&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9534545082192904">
@@ -228,6 +236,10 @@
                         <action id="-10" name="Set value" sid="1767100010658931" type="monster1">
                             <param id="0" name="Instance variable">direction</param>
                             <param id="1" name="Value">directionLeft</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3836130308722478" type="monster1">
+                            <param id="0" name="Animation">&quot;go&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

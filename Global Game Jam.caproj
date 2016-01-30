@@ -217,13 +217,25 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="stay" pingpong="0" repeatcount="1" repeatto="0" sid="7682614744522708" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="2" loop="0" name="go" pingpong="0" repeatcount="1" repeatto="0" sid="2763990175448574" speed="5">
+                        <frame duration="1" hotspotX="0.50211" hotspotY="0.501916" original-source="E:\Project\gamesjam2016\IMG\seth warriors walk 0001.png">
+                            <collision-poly>
+                                <point x="0.337553" y="0" />
+                                <point x="0.814346" y="0" />
+                                <point x="0.839662" y="1" />
+                                <point x="0.341772" y="0.992337" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\seth warriors.png">
+                            <collision-poly>
+                                <point x="0.204301" y="0" />
+                                <point x="0.693549" y="0.00378788" />
+                                <point x="0.688172" y="1" />
+                                <point x="0.209677" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="go" pingpong="0" repeatcount="1" repeatto="0" sid="2763990175448574" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                    <animation framecount="2" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="7299322528148613" speed="5">
+                    <animation framecount="3" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="7299322528148613" speed="5">
                         <frame duration="1" hotspotX="0.50211" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\seth warriors attack 0001.png">
                             <collision-poly>
                                 <point x="0.345992" y="0" />
@@ -238,6 +250,14 @@
                                 <point x="0.876543" y="0" />
                                 <point x="0.868313" y="1" />
                                 <point x="0.300412" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50211" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.345992" y="0" />
+                                <point x="0.797468" y="0" />
+                                <point x="0.805907" y="1" />
+                                <point x="0.337553" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
