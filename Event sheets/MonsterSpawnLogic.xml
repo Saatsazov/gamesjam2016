@@ -84,6 +84,9 @@
                     <param id="0" name="Instance variable">spawnerId</param>
                     <param id="1" name="Value">enemyBoatSpawner.UID</param>
                 </action>
+                <action id="-8" name="Set angle" sid="763994447063336" type="enemyBoatPlatform">
+                    <param id="0" name="Angle">enemyBoatSpawner.targetAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2793536926888351">
@@ -99,7 +102,31 @@
                 <action behavior="Bullet" id="2" name="Set gravity" sid="7478506795521686" type="enemyBoatPlatform">
                     <param id="0" name="Gravity">300</param>
                 </action>
+                <action disabled="1" id="-8" name="Set angle" sid="810960886803414" type="enemyBoatPlatform">
+                    <param id="0" name="Angle">90</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="1477653533079801">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="3667531635217998" type="enemyBoatJumpArea">
+                            <param id="0" name="Object">monster1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8555970800529684" type="monster1">
+                            <param id="0" name="Instance variable">isHuntingPlayer</param>
+                            <param id="1" name="Value">true</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7705760757544751" type="monster1">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="8659150124472779" type="monster1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="681346140606818">
             <conditions>
@@ -107,6 +134,52 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5436725478518477" type="enemyBoatPlatform" />
+            </actions>
+        </event-block>
+        <event-block sid="1094706176647344">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5382773396186741" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="1178522661887678">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7243087912163237" type="enemyBoatPlatform" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6668080075915607">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4402431455741264" type="enemyBoatSpawner">
+                            <param id="0" name="Unique ID">enemyBoatPlatform.spawnerId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="9517488077984461" type="enemyBoatSpawner">
+                            <param id="0" name="Instance variable">spawnedBoatCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4220271263536285">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4793089125567431" type="enemyBoatSpawnArea">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1992577140050293" type="monster1">
+                    <param id="0" name="Instance variable">isHuntingPlayer</param>
+                    <param id="1" name="Value">false</param>
+                </action>
+                <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="8684596722570845" type="monster1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="9940297045237677" type="monster1">
+                    <param id="0" name="State">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -59,6 +59,9 @@
                     <behavior-type name="Solid" sid="3614366900289677">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Jumpthru" sid="8028411742839882">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268901826072253" speed="5">
@@ -182,7 +185,7 @@
                     <instance-variable name="health" sid="4930938458023497" type="number" />
                     <instance-variable name="spawnerId" sid="611402914470574" type="number" />
                     <instance-variable name="direction" sid="7334803041652973" type="number" />
-                    <instance-variable name="isStunnedByCry" sid="554611899905323" type="number" />
+                    <instance-variable name="isHuntingPlayer" sid="1585230126886897" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="8581531616972675">
@@ -212,6 +215,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="spawnedMonstersCount" sid="4116497697914205" type="number" />
+                    <instance-variable name="isMonsterPlatfformEnabled" sid="5856424514293878" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6010054570491339" speed="5">
@@ -382,6 +386,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="spawnedBoatCount" sid="8564805776695107" type="number" />
+                    <instance-variable name="targetAngle" sid="3290312452335834" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6178297861357115" speed="5">
@@ -393,6 +398,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2485324616182255" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemyBoatSpawnArea" sid="3554842877623885">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1669806758248417" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemyBoatJumpArea" sid="8282564554824345">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2702181559172983" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

@@ -189,6 +189,11 @@
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Y co-ordinate">player.Y</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="2751175609662626" type="monster1">
+                    <param id="0" name="Instance variable">isHuntingPlayer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">true</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
