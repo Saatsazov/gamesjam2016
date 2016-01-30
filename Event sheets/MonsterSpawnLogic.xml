@@ -182,5 +182,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="4346461957939058">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6627562202582754" type="enemyBoatJumpArea">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4754792167290899" type="monster1">
+                    <param id="0" name="Instance variable">isHuntingPlayer</param>
+                    <param id="1" name="Value">true</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5632974113563493" type="monster1">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="1837746734859955" type="monster1">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
