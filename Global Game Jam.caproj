@@ -75,14 +75,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
-                        <frame duration="1" hotspotX="0.517588" hotspotY="0.507463" original-source="E:\2000px-Re-Horakhty.svg.png">
-                            <collision-poly>
-                                <point x="0.40201" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0.407035" y="1" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.517588" hotspotY="0.507463" original-source="E:\2000px-Re-Horakhty.svg.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -96,16 +89,18 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="health" sid="4930938458023497" type="number" />
+                    <instance-variable name="spawnerId" sid="611402914470574" type="number" />
+                    <instance-variable name="direction" sid="7334803041652973" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="8581531616972675">
                         <behavior id="solid" />
                     </behavior-type>
-                    <behavior-type name="Physics" sid="6773205324306136">
-                        <behavior id="Physics" />
-                    </behavior-type>
                     <behavior-type name="DestroyOutsideLayout" sid="2488201601295309">
                         <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Platform" sid="6308864628991449">
+                        <behavior id="Platform" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -116,6 +111,9 @@
             </object-type>
             <object-type name="monsterSpawner" sid="6081416790853021">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="spawnedMonstersCount" sid="4116497697914205" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6010054570491339" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
