@@ -16,6 +16,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -77,6 +78,9 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
                         <frame duration="1" hotspotX="0.517588" hotspotY="0.507463" original-source="E:\2000px-Re-Horakhty.svg.png" />
                     </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="2146921579121159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="dayIndicator" sid="1079052074501649">
@@ -103,6 +107,10 @@
                         <behavior id="Platform" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>monster1</type>
+                    <type>enemyMeeleAttack</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1225706424058824" speed="5">
                         <frame duration="1" hotspotX="0.490909" hotspotY="0.5" original-source="E:\set.png" />
@@ -122,8 +130,25 @@
             </object-type>
             <object-type name="meleeAttack" sid="6066446617199334">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="4971864858892356">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128313884580452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemyMeeleAttack" sid="4080741229885444">
+                <plugin id="Sprite" />
+                <container>
+                    <type>monster1</type>
+                    <type>enemyMeeleAttack</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7661998953996346" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
