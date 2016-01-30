@@ -80,7 +80,7 @@
                 <action behavior="Platform" id="11" name="Set enabled" sid="3947073037815195" type="monster1">
                     <param id="0" name="State">0</param>
                 </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="5750719335260511" type="monster1">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="519961530997744" type="monster1">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>

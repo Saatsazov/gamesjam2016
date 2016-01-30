@@ -194,7 +194,7 @@
                     <behavior-type name="Platform" sid="6308864628991449">
                         <behavior id="Platform" />
                     </behavior-type>
-                    <behavior-type name="Bullet" sid="4238513363415954">
+                    <behavior-type name="Bullet" sid="6033411057672783">
                         <behavior id="Bullet" />
                     </behavior-type>
                 </behaviors>
@@ -360,6 +360,39 @@
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="rostrum" sid="656521214336019">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8556519622696884" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\rostrum.png">
+                        <collision-poly>
+                            <point x="0.516667" y="0.516667" />
+                            <point x="0.5" y="0.208333" />
+                            <point x="0.69" y="0.31" />
+                            <point x="0.643333" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.823333" />
+                            <point x="0.541667" y="0.458333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="deck" sid="7162253650621317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6305860057145663" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\deck.png">
+                        <collision-poly>
+                            <point x="0.848333" y="0.848333" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.981667" y="0.981667" />
+                            <point x="0.02" y="0.98" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="5008010868559932">
@@ -377,9 +410,9 @@
         <event-sheet>PlayerLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="11" />
-        <global-instance type="Mouse" uid="25" />
-        <global-instance type="Function" uid="26" />
+        <global-instance type="Keyboard" uid="32" />
+        <global-instance type="Mouse" uid="33" />
+        <global-instance type="Function" uid="34" />
     </global-instances>
     <sounds-folder />
     <music-folder />
