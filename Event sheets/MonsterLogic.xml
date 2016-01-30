@@ -25,6 +25,10 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="519961530997744" type="monster1">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="5038247271319303" type="monster1">
+                    <param id="0" name="Animation">&quot;death&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5833039786868811">
@@ -115,6 +119,11 @@
                         <condition id="1" name="Is overlapping another object" sid="417478759977304" type="enemyMeeleAttack">
                             <param id="0" name="Object">player</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3412665224224078" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action disabled="1" id="-12" name="Subtract from" sid="3948365139811857" type="player">
@@ -170,6 +179,11 @@
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="X co-ordinate">oneSidePlatform.X + oneSidePlatform.Width /2</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="1826199547438693" type="System">
+                            <param id="0" name="First value">monster1.health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action disabled="1" id="-16" name="Set opacity" sid="1453995768389835" type="platform">
@@ -201,6 +215,11 @@
                     <param id="0" name="Instance variable">isHuntingPlayer</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">true</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="553089314105011" type="System">
+                    <param id="0" name="First value">monster1.health</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions />
