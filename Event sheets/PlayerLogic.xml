@@ -6,10 +6,13 @@
         <variable constant="0" name="superAbilityReadyState" sid="3715282869182195" static="0" type="number">3</variable>
         <variable constant="0" name="superAbilityState" sid="4610180115611662" static="0" type="number">3</variable>
         <variable constant="0" name="playerMeeleAtackFunction" sid="2027424828872906" static="0" type="text">playerMeeleAtackFunction</variable>
-        <event-block sid="1309289923295658">
+        <event-block any="1" sid="1309289923295658">
             <conditions>
                 <condition id="2" name="Key is down" sid="3439916747575822" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="4512729818522086" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
@@ -19,16 +22,55 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7989754601079259">
+        <event-block any="1" sid="7989754601079259">
             <conditions>
                 <condition id="2" name="Key is down" sid="5320434487376113" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="6216422409308797" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="4965425191980589" type="player">
                     <param id="0" name="Instance variable">direction</param>
                     <param id="1" name="Value">directionLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1133064110011278">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3708885256432635" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="6392988127877548" type="player">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2457081841609375">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4784073651509139" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="6628106637391089" type="player">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="21537403169602">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7516049631400605" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3126717374064321" type="player">
+                    <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
