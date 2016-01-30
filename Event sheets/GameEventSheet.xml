@@ -150,6 +150,31 @@
                 <action id="-9" name="Destroy" sid="4640610012981807" type="monster1" />
             </actions>
         </event-block>
+        <event-block sid="8915136981696189">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5425825100071135" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3035978229018285" type="gameOverMessage">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-24" name="Stop loop" sid="3858304259595529" type="System" />
+            </actions>
+            <sub-events>
+                <event-block sid="3624628312747977">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="1938057658159306" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="2045438502559557" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="3617499385787713">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="5197985724578813" type="enemyMeeleAttack">

@@ -11,6 +11,7 @@
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
@@ -153,6 +154,12 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="gameOverMessage" sid="348698591046808">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Mouse" sid="2973557831079676">
+                <plugin id="Mouse" />
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />
@@ -173,6 +180,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Mouse" uid="11" />
     </global-instances>
     <sounds-folder />
     <music-folder />
