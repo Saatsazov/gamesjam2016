@@ -90,6 +90,10 @@
                     <param id="0" name="X">player.X- player.Width</param>
                     <param id="1" name="Y">player.Y</param>
                 </action>
+                <action id="-3" name="Set position" sid="2303343720238314" type="enemyMeeleAttack">
+                    <param id="0" name="X">monster1.X - monster1.Width</param>
+                    <param id="1" name="Y">monster1.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4186914949102065">
@@ -144,6 +148,22 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="4640610012981807" type="monster1" />
+            </actions>
+        </event-block>
+        <event-block sid="3617499385787713">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5197985724578813" type="enemyMeeleAttack">
+                    <param id="0" name="Object">player</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="505653386273851" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="8589125517709075" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6832365882759791">
