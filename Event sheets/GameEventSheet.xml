@@ -3,16 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
+        <variable constant="0" name="monstersCount" sid="2363186824450788" static="0" type="number">0</variable>
+        <variable constant="0" name="maxMonstersCount" sid="6883606136917437" static="0" type="number">1</variable>
         <variable constant="0" name="directionLeft" sid="3650356626283203" static="0" type="number">0</variable>
         <variable constant="0" name="directionRight" sid="2910758584446361" static="0" type="number">1</variable>
-        <variable constant="0" name="playerHealth" sid="4530368819741246" static="0" type="number">100</variable>
         <event-block sid="6287266488576306">
             <conditions>
                 <condition id="-1" name="Every tick" sid="6257189773717238" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="7403312855348956" type="healthIndicator">
-                    <param id="0" name="Text">&quot;Здоровье :&quot; &amp; playerHealth</param>
+                    <param id="0" name="Text">&quot;Здоровье :&quot; &amp; player.health</param>
                 </action>
             </actions>
         </event-block>
@@ -50,33 +51,104 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5212138830364441">
+            </sub-events>
+        </event-block>
+        <event-block sid="173709821869609">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3593602453332878" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1303909730624815">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="7161381252746034" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="-14" name="Compare variable" sid="5109934585425321" type="System">
+                            <param id="0" name="Variable">monstersCount</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">maxMonstersCount</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="8026656813560639" type="player">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Value">directionLeft</param>
+                        <action id="-9" name="Set value" sid="7295613475362759" type="System">
+                            <param id="0" name="Variable">monstersCount</param>
+                            <param id="1" name="Value">monstersCount + 1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4186914949102065">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="1053154325448874" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="1511716240035716" type="player">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Value">directionRight</param>
+                        <action id="0" name="Spawn another object" sid="1721898947711451" type="monsterSpawner">
+                            <param id="0" name="Object">monster1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3950274236531984">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7775897244356207" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9206901697460377" type="meleeAttack">
+                    <param id="0" name="X">player.X- player.Width</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4186914949102065">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1053154325448874" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1511716240035716" type="player">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">directionRight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5212138830364441">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7161381252746034" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8026656813560639" type="player">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">directionLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9683856391832295">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="349684104103051" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="257413486871294" type="meleeAttack">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1439817322396717" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7698537352137973">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1155759218521481" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4640610012981807" type="monster1" />
+                <action id="-9" name="Set value" sid="230853250685088" type="System">
+                    <param id="0" name="Variable">monstersCount</param>
+                    <param id="1" name="Value">monstersCount - 1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
