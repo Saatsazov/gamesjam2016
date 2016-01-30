@@ -21,21 +21,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3950274236531984">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="7775897244356207" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="9206901697460377" type="meleeAttack">
-                    <param id="0" name="X">player.X- player.Width</param>
-                    <param id="1" name="Y">player.Y</param>
-                </action>
-                <action id="-3" name="Set position" sid="2303343720238314" type="enemyMeeleAttack">
-                    <param id="0" name="X">monster1.X - monster1.Width</param>
-                    <param id="1" name="Y">monster1.Y</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3947535644185031">
             <conditions>
                 <condition id="1" name="On any click" sid="9580185152067758" type="Mouse" />
