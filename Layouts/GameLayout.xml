@@ -305,6 +305,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -330,11 +335,12 @@
                     </properties>
                     <instance-variables>
                         <spawnedMonstersCount>0</spawnedMonstersCount>
+                        <isMonsterPlatfformEnabled>false</isMonsterPlatfformEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>623</x>
+                        <x>694</x>
                         <y>173</y>
                         <z>0</z>
                         <width>29</width>
@@ -357,7 +363,7 @@
                         <health>2</health>
                         <spawnerId>0</spawnerId>
                         <direction>0</direction>
-                        <isStunnedByCry>0</isStunnedByCry>
+                        <isHuntingPlayer>1</isHuntingPlayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -440,11 +446,12 @@
                     </properties>
                     <instance-variables>
                         <spawnedMonstersCount>0</spawnedMonstersCount>
+                        <isMonsterPlatfformEnabled>false</isMonsterPlatfformEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1592</x>
+                        <x>1576</x>
                         <y>182</y>
                         <z>0</z>
                         <width>29</width>
@@ -497,6 +504,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -522,6 +534,11 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -584,6 +601,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -609,6 +631,11 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -642,6 +669,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -667,6 +699,11 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -930,8 +967,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>120</x>
-                        <y>596</y>
+                        <x>-155</x>
+                        <y>591</y>
                         <z>0</z>
                         <width>243</width>
                         <height>14</height>
@@ -951,6 +988,7 @@
                     </properties>
                     <instance-variables>
                         <spawnedBoatCount>0</spawnedBoatCount>
+                        <targetAngle>0</targetAngle>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -976,6 +1014,7 @@
                     </properties>
                     <instance-variables>
                         <spawnedBoatCount>0</spawnedBoatCount>
+                        <targetAngle>0</targetAngle>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
