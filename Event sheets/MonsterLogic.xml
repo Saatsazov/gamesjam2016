@@ -73,7 +73,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="3269049484829683" type="monster1" />
+                <action disabled="1" id="-9" name="Destroy" sid="3269049484829683" type="monster1" />
+                <action behavior="Solid" id="0" name="Set enabled" sid="6019543510397489" type="monster1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="3947073037815195" type="monster1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5750719335260511" type="monster1">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5833039786868811">
