@@ -1147,10 +1147,10 @@
             </instances>
             <effects />
         </layer>
-		<layer name="Layer 0" sid="8722530541249526">
+        <layer name="Layer 0" sid="8722530541249526">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
