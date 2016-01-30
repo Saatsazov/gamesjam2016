@@ -114,5 +114,27 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8556666356969384">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="2294582316148188" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8974554108788187" type="player">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4629068056425226">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="2968129951028446" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1143419189772924" type="player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
