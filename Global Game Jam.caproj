@@ -891,9 +891,95 @@
             </object-type>
             <object-type name="cloudSpawner" sid="8452158655192975">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="8074505754064927">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6935586237184385" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cloud1" sid="8634405139093709">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="6313560731998959">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="1953676650546141">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5094859339467653" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="E:\Projects\Games\!Global Game Jam\IMG\egypt clouds 0001.png">
+                            <collision-poly>
+                                <point x="0.254505" y="0.704225" />
+                                <point x="0.720721" y="0.699531" />
+                                <point x="0.86036" y="0.704225" />
+                                <point x="1" y="0.70892" />
+                                <point x="0.853603" y="0.830986" />
+                                <point x="0.5" y="0.830986" />
+                                <point x="0.0810811" y="0.830986" />
+                                <point x="0.036036" y="0.704225" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cloud2" sid="4886573099553355">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="1456321110031697">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="5227775160895407">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1169373258450945" speed="5">
+                        <frame duration="1" hotspotX="0.501608" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\egypt clouds 0002.png">
+                            <collision-poly>
+                                <point x="0.366559" y="0.825301" />
+                                <point x="0.755627" y="0.831325" />
+                                <point x="0.877813" y="0.831325" />
+                                <point x="1" y="0.825301" />
+                                <point x="1" y="0.927711" />
+                                <point x="0.678456" y="0.927711" />
+                                <point x="0" y="0.927711" />
+                                <point x="0" y="0.819277" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cloud3" sid="1174067755626197">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="4374157894281693">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="6689425742894644">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4854777347742754" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\egypt clouds 0003.png">
+                            <collision-poly>
+                                <point x="0.266497" y="0.709091" />
+                                <point x="0.664975" y="0.709091" />
+                                <point x="0.784264" y="0.736364" />
+                                <point x="1" y="0.7" />
+                                <point x="1" y="0.881818" />
+                                <point x="0.479695" y="0.872727" />
+                                <point x="0" y="0.881818" />
+                                <point x="0" y="0.709091" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
