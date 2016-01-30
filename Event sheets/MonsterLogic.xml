@@ -64,7 +64,7 @@
         <event-block sid="1437331214056075">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="984946728021352" type="System">
-                    <param id="0" name="Interval (seconds)">0.040</param>
+                    <param id="0" name="Interval (seconds)">0.037</param>
                 </condition>
             </conditions>
             <actions />
@@ -195,10 +195,10 @@
         </event-block>
         <event-block disabled="1" sid="5748100433783225">
             <conditions>
-                <condition id="-15" name="Pick nearest/furthest" sid="2731292513046446" type="platform">
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="2731292513046446" type="platform">
                     <param id="0" name="Which">0</param>
                     <param id="1" name="X">monster1.X</param>
-                    <param id="2" name="Y">monster1.Y - monster1.Height</param>
+                    <param id="2" name="Y">monster1.Y </param>
                 </condition>
                 <condition disabled="1" id="-1" name="Compare X" sid="8327315980699993" type="platform">
                     <param id="0" name="Comparison">0</param>
@@ -212,25 +212,32 @@
                     <param id="0" name="Comparison">2</param>
                     <param id="1" name="Y co-ordinate">monster1.Y</param>
                 </condition>
+                <condition id="-1" name="Compare X" sid="9509568515530684" type="monster1">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">platform.X</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="5967514797458017" type="monster1">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">platform.X+ platform.Width</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-16" name="Set opacity" sid="1630636016784332" type="platform">
                     <param id="0" name="Opacity">30</param>
                 </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9272472305936079" type="monster1">
+                    <param id="0" name="Control">2</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block disabled="1" sid="7879487999512927">
                     <conditions>
-                        <condition disabled="1" id="-1" name="Compare X" sid="5501795256805678" type="platform">
+                        <condition id="-1" name="Compare X" sid="5501795256805678" type="platform">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="X co-ordinate">monster1.X</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="9272472305936079" type="monster1">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
@@ -282,6 +289,45 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7100497970787941">
+            <conditions>
+                <condition id="-11" name="For Each" sid="6489398492299671" type="System">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5527488766527575">
+                    <conditions>
+                        <condition id="-15" name="Pick nearest/furthest" sid="5030673301666634" type="platform">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">monster1.X</param>
+                            <param id="2" name="Y">monster1.Y - monster1.Height</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="793430966196369" type="platform">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">monster1.Y</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="3867212601833191" type="monster1">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">platform.X - platform.Width/2</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="2466417751526642" type="monster1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">platform.X + platform.Width /2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="1453995768389835" type="platform">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1806466800588398" type="monster1">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

@@ -235,8 +235,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-54</x>
-                        <y>169</y>
+                        <x>1099</x>
+                        <y>219</y>
                         <z>0</z>
                         <width>29</width>
                         <height>28</height>
@@ -746,7 +746,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="xyDetect" uid="13">
+                <instance type="xyDetect" uid="4">
                     <properties>
                         <text>mouse x y</text>
                         <initial-visibility>Visible</initial-visibility>

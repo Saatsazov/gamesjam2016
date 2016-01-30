@@ -243,8 +243,8 @@
         <event-sheet>PlayerLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="4" />
-        <global-instance type="Mouse" uid="11" />
+        <global-instance type="Keyboard" uid="11" />
+        <global-instance type="Mouse" uid="25" />
     </global-instances>
     <sounds-folder />
     <music-folder />
