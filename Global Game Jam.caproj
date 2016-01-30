@@ -237,6 +237,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="xyDetect" sid="3877146000096116">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />
@@ -258,8 +261,8 @@
         <event-sheet>PlayerLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="4" />
-        <global-instance type="Mouse" uid="11" />
+        <global-instance type="Keyboard" uid="11" />
+        <global-instance type="Mouse" uid="25" />
     </global-instances>
     <sounds-folder />
     <music-folder />
