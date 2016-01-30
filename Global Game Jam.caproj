@@ -20,7 +20,6 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -366,9 +365,6 @@
                 <behaviors>
                     <behavior-type name="Pin" sid="5297103443480078">
                         <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="Flash" sid="9644731379143552">
-                        <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
                 <container>
