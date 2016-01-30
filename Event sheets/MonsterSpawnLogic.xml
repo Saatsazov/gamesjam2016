@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MonsterSpawnLogic</name>
+    <events>
+        <event-block sid="2946822416924864">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monsterSpawner">
+                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2842891488383421" type="System">
+                    <param id="0" name="Variable">monstersCount</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">maxMonstersCount</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="780671596359118" type="System">
+                    <param id="0" name="Variable">monstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="6531789006293336" type="monsterSpawner">
+                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6519644711558087" type="monsterSpawner">
+                    <param id="0" name="Object">monster1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8235188179910663" type="monster1">
+                    <param id="0" name="Instance variable">spawnerId</param>
+                    <param id="1" name="Value">monsterSpawner.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1923614174214696">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="6920237207097936" type="monster1" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6729549924999383">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6766196566253654" type="monsterSpawner">
+                            <param id="0" name="Unique ID">monster1.spawnerId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="8705651559079239" type="monsterSpawner">
+                            <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6135875894825103" type="System">
+                            <param id="0" name="Variable">monstersCount</param>
+                            <param id="1" name="Value">monstersCount - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2442990618326736">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4537596366969904" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3927085242676373" type="enemyBoatPlatform">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

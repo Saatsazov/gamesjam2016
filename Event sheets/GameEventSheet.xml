@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
+        <include>MonsterSpawnLogic</include>
         <include>PlayerLogic</include>
         <include>MonsterLogic</include>
         <variable constant="0" name="isGameOver" sid="7907470040554158" static="0" type="text">false</variable>

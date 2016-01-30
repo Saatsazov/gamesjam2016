@@ -6,64 +6,6 @@
         <variable constant="0" name="false" sid="9072273759369366" static="0" type="number">0</variable>
         <variable constant="0" name="true" sid="29504542513919" static="0" type="number">1</variable>
         <variable constant="0" name="enemyAttackTimer" sid="8106700498321128" static="0" type="text">enemyAttackTimer</variable>
-        <event-block sid="157832267396995">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="1245824610457941" type="monsterSpawner">
-                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="729473245252404" type="System">
-                    <param id="0" name="Variable">monstersCount</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">maxMonstersCount</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="7656351984421281" type="System">
-                    <param id="0" name="Variable">monstersCount</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-11" name="Add to" sid="3854255425683032" type="monsterSpawner">
-                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="4030602053552192" type="monsterSpawner">
-                    <param id="0" name="Object">monster1</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="6103594691493629" type="monster1">
-                    <param id="0" name="Instance variable">spawnerId</param>
-                    <param id="1" name="Value">monsterSpawner.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6073770819198046">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="261255519082548" type="monster1" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2201864308554755">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="5172341334647575" type="monsterSpawner">
-                            <param id="0" name="Unique ID">monster1.spawnerId</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="5723444969992022" type="monsterSpawner">
-                            <param id="0" name="Instance variable">spawnedMonstersCount</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6580211761404254" type="System">
-                            <param id="0" name="Variable">monstersCount</param>
-                            <param id="1" name="Value">monstersCount - 1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="4310872205434884">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="7102503213526789" type="monster1">
