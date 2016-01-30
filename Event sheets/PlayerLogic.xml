@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlayerLogic</name>
     <events>
+        <variable constant="0" name="playerMeeleAtackFunction" sid="2027424828872906" static="0" type="text">playerMeeleAtackFunction</variable>
         <event-block sid="1309289923295658">
             <conditions>
                 <condition id="2" name="Key is down" sid="3439916747575822" type="Keyboard">
@@ -73,7 +74,10 @@
                         <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="186786372903635" type="screamAttack">
+                        <action id="7" name="Set mirrored" sid="3165842654729587" type="playerCryAoe">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="3532858689307423" type="playerRangeAttackSource">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -90,7 +94,10 @@
                         <action id="7" name="Set mirrored" sid="5754300240387017" type="player">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="7988375151321267" type="screamAttack">
+                        <action id="7" name="Set mirrored" sid="2974916904833732" type="playerCryAoe">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="331481859786725" type="playerRangeAttackSource">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -106,21 +113,17 @@
                     <param id="0" name="X">player.X- player.Width/2</param>
                     <param id="1" name="Y">player.Y</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="5610337721752755">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="2684804914225298" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-                <condition id="1" name="Is overlapping another object" sid="5537887755686718" type="meleeAttack">
-                    <param id="0" name="Object">monster1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="9500616677571553" type="monster1">
-                    <param id="0" name="Instance variable">health</param>
-                    <param id="1" name="Value">1</param>
+                <action disabled="1" id="-3" name="Set position" sid="7110250507810931" type="playerRangeAttackSource">
+                    <param id="0" name="X">player.X</param>
+                    <param id="1" name="Y">player.Y - player.Height / 3</param>
+                </action>
+                <action disabled="1" id="-22" name="Set angle toward position" sid="3587090977934375" type="playerRangeAttackSource">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action disabled="1" id="-3" name="Set position" sid="214103135960279" type="playerCryAoeSource">
+                    <param id="0" name="X">player.X - player.Width/2</param>
+                    <param id="1" name="Y">player.Y - player.Height/3</param>
                 </action>
             </actions>
         </event-block>
@@ -153,11 +156,53 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="2837448086065462" type="Function">
+                    <param id="0" name="Name">&quot;playerMeleeAttack&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5058487736115497">
+            <conditions>
+                <condition id="0" name="On click" sid="9286770229156392" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="6066946902183772" type="Function">
+                    <param id="0" name="Name">&quot;playerMeleeAttack&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3401451314644606">
+            <conditions>
+                <condition id="0" name="On function" sid="2810604785839036" type="Function">
+                    <param id="0" name="Name">&quot;playerMeleeAttack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="4" name="Set animation" sid="1326943067691373" type="player">
                     <param id="0" name="Animation">&quot;attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="2860127744461289">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9869007294657615" type="meleeAttack">
+                            <param id="0" name="Object">monster1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="9500616677571553" type="monster1">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="6332809786448034">
             <conditions>
@@ -172,36 +217,142 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1391279574562953">
+        <event-block sid="674976635228447">
             <conditions>
-                <condition id="0" name="On key pressed" sid="5108134813404006" type="Keyboard">
-                    <param id="0" name="Key">81 (Q)</param>
+                <condition id="0" name="On click" sid="3578315029551708" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
                 </condition>
-                <condition disabled="1" id="1" name="Is overlapping another object" sid="3969541197729523" type="screamAttack">
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1912507921058244" type="Function">
+                    <param id="0" name="Name">&quot;playerRangeAttack&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="469883353279557">
+            <conditions>
+                <condition id="0" name="On function" sid="7752022874832923" type="Function">
+                    <param id="0" name="Name">&quot;playerRangeAttack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3522305995647441" type="playerRangeAttackSource">
+                    <param id="0" name="Object">playerRangeAttack</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="8403130623383588" type="playerRangeAttack">
+                    <param id="0" name="X">playerRangeAttackSource.X</param>
+                    <param id="1" name="Y">playerRangeAttackSource.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="9534136683138163" type="playerRangeAttack">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6741791043847824">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4938423728067357" type="playerRangeAttack">
                     <param id="0" name="Object">monster1</param>
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-12" name="Subtract from" sid="5813780611082921" type="monster1">
+                <action id="-10" name="Set value" sid="9263313935165482" type="monster1">
                     <param id="0" name="Instance variable">health</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action behavior="Platform" id="7" name="Simulate control" sid="2529164410816596" type="monster1">
-                    <param id="0" name="Control">0</param>
-                </action>
-                <action id="1" name="Set blend mode" sid="3126981084242066" type="Enemies">
-                    <param id="0" name="Blend mode">0</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8086922583806157">
+        <event-block sid="3874778542058586">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="5471554324128363" type="System" />
+                <condition id="0" name="On click" sid="1711667370240073" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="3523276420637614" type="screamAttack">
+                <action id="0" name="Call function" sid="6299284418368846" type="Function">
+                    <param id="0" name="Name">&quot;playerCryAttack&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4257957234112928">
+            <conditions>
+                <condition id="0" name="On function" sid="9533435237622709" type="Function">
+                    <param id="0" name="Name">&quot;playerCryAttack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3517681554275499" type="player">
+                    <param id="0" name="Animation">&quot;cry&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action disabled="1" id="0" name="Spawn another object" sid="3835164344753567" type="playerCryAoeSource">
+                    <param id="0" name="Object">playerCryAoe</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="3530127696481996" type="playerCryAoe" />
+            </actions>
+            <sub-events>
+                <event-block sid="4418786928060952">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8991285208537631" type="playerCryAoe">
+                            <param id="0" name="Object">monster1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="323837893095208">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5018914075274241" type="player">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">directionLeft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="7164088906320005" type="monster1">
+                                    <param id="0" name="X">monster1.X - 300</param>
+                                    <param id="1" name="Y">monster1.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3581327411654995">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5762726335716933" type="player">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">directionRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4301921040903492" type="monster1">
+                                    <param id="0" name="X">monster1.X + 300</param>
+                                    <param id="1" name="Y">monster1.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7486039888559011">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8050622716187936" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="4657583624102523" type="playerCryAoe">
                     <param id="0" name="Pin to">player</param>
-                    <param id="1" name="Mode">1</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="146543322067919" type="playerRangeAttackSource">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>

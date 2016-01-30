@@ -175,7 +175,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="3948365139811857" type="player">
+                        <action disabled="1" id="-12" name="Subtract from" sid="3948365139811857" type="player">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">monster1Damage</param>
                         </action>
