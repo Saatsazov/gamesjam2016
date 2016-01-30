@@ -423,12 +423,46 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6305860057145663" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\deck.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-1.85714" original-source="E:\Project\gamesjam2016\IMG\deck.png">
                         <collision-poly>
-                            <point x="0.848333" y="0.848333" />
-                            <point x="0.15" y="0.85" />
-                            <point x="0.981667" y="0.981667" />
-                            <point x="0.02" y="0.98" />
+                            <point x="0.848333" y="0.133331" />
+                            <point x="0.15" y="0.142857" />
+                            <point x="0.981667" y="0.89524" />
+                            <point x="0.02" y="0.885714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="platformForASun" sid="5852670845405673">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6301368789476073" speed="5">
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.501253" original-source="E:\Project\gamesjam2016\IMG\platform for a sun.png">
+                        <collision-poly>
+                            <point x="0.180952" y="0.238095" />
+                            <point x="0.499048" y="0.0551378" />
+                            <point x="0.927619" y="0.0952381" />
+                            <point x="0.851429" y="0.498747" />
+                            <point x="0.851429" y="0.804511" />
+                            <point x="0.499048" y="0.972431" />
+                            <point x="0.180952" y="0.761905" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="platformForRa" sid="9603872903965466">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="54211775822031" speed="5">
+                    <frame duration="1" hotspotX="0.515837" hotspotY="-0.0784314" original-source="E:\Project\gamesjam2016\IMG\platform for ra.png">
+                        <collision-poly>
+                            <point x="0.357466" y="0.104575" />
+                            <point x="0.511312" y="0.117647" />
+                            <point x="0.936652" y="0.117647" />
+                            <point x="0.511312" y="0.928105" />
+                            <point x="0.0542986" y="0.169935" />
                         </collision-poly>
                     </frame>
                 </animation>
