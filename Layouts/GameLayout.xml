@@ -216,8 +216,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>694</x>
-                        <y>173</y>
+                        <x>106</x>
+                        <y>322</y>
                         <z>0</z>
                         <width>29</width>
                         <height>28</height>
@@ -1121,6 +1121,28 @@
                         <depth>0</depth>
                         <hotspotX>0.501597464</hotspotX>
                         <hotspotY>0.501160085</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="enemyBoatSpawnArea" uid="44">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>152</x>
+                        <y>470</y>
+                        <z>0</z>
+                        <width>151</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
