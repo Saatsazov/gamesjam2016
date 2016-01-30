@@ -210,6 +210,8 @@
     </layout-folder>
     <event-folder>
         <event-sheet>GameEventSheet.xml</event-sheet>
+        <event-sheet>MonsterLogic.xml</event-sheet>
+        <event-sheet>PlayerLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
