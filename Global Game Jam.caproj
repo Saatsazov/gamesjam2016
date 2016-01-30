@@ -661,6 +661,7 @@
         <event-sheet>MonsterLogic.xml</event-sheet>
         <event-sheet>PlayerLogic.xml</event-sheet>
         <event-sheet>MonsterSpawnLogic.xml</event-sheet>
+        <event-sheet>SunLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="32" />
