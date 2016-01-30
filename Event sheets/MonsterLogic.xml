@@ -243,6 +243,10 @@
                 <condition id="1" inverted="1" name="Is overlapping another object" sid="8667237059763591" type="enemyMeeleAttack">
                     <param id="0" name="Object">player</param>
                 </condition>
+                <condition id="-2" inverted="1" name="Compare Y" sid="7479048994804713" type="monster1">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Y co-ordinate">player.Y</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

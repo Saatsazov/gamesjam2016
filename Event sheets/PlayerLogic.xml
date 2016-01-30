@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlayerLogic</name>
     <events>
+        <variable constant="0" name="superAbilityReadyState" sid="3715282869182195" static="0" type="number">3</variable>
+        <variable constant="0" name="superAbilityState" sid="4610180115611662" static="0" type="number">3</variable>
         <variable constant="0" name="playerMeeleAtackFunction" sid="2027424828872906" static="0" type="text">playerMeeleAtackFunction</variable>
         <event-block sid="1309289923295658">
             <conditions>
@@ -236,6 +238,11 @@
                 <condition id="0" name="On function" sid="7752022874832923" type="Function">
                     <param id="0" name="Name">&quot;playerRangeAttack&quot;</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="9053341122548929" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">superAbilityReadyState</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="3522305995647441" type="playerRangeAttackSource">
@@ -250,6 +257,10 @@
                 <action id="-22" name="Set angle toward position" sid="9534136683138163" type="playerRangeAttack">
                     <param id="0" name="X">Mouse.X</param>
                     <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="224593068491625" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -285,6 +296,11 @@
                 <condition id="0" name="On function" sid="9533435237622709" type="Function">
                     <param id="0" name="Name">&quot;playerCryAttack&quot;</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="6162092606508351" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">superAbilityReadyState</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3517681554275499" type="player">
@@ -297,6 +313,10 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action behavior="Fade" id="0" name="Restart fade" sid="3530127696481996" type="playerCryAoe" />
+                <action id="-9" name="Set value" sid="1742887296895458" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="4418786928060952">
@@ -353,6 +373,24 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="146543322067919" type="playerRangeAttackSource">
                     <param id="0" name="Pin to">player</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3414635007832186">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3020358527193649" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="281908040912466" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">superAbilityReadyState</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="5533798059747976" type="System">
+                    <param id="0" name="Variable">superAbilityState</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
