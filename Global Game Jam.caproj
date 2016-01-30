@@ -15,7 +15,9 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -50,6 +52,9 @@
                     <behavior-type name="Solid" sid="3614366900289677">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Physics" sid="7570526321526805">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268901826072253" speed="5">
@@ -61,6 +66,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="direction" sid="4183539730741205" type="number" />
+                    <instance-variable name="health" sid="2106935237176517" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="871749184582437">
@@ -69,18 +75,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.51" original-source="E:\2000px-Re-Horakhty.svg.png">
-                            <collision-poly>
-                                <point x="0.472393" y="0.215645" />
-                                <point x="0.521472" y="0.030208" />
-                                <point x="0.907975" y="0.0897311" />
-                                <point x="0.981595" y="0.506393" />
-                                <point x="0.96319" y="0.945948" />
-                                <point x="0.521472" y="0.996314" />
-                                <point x="0.0920245" y="0.94137" />
-                                <point x="0.104294" y="0.506393" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.517588" hotspotY="0.507463" original-source="E:\2000px-Re-Horakhty.svg.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -90,12 +85,61 @@
             <object-type name="healthIndicator" sid="6294868982349647">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="monster1" sid="7065328984804416">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="health" sid="4930938458023497" type="number" />
+                    <instance-variable name="spawnerId" sid="611402914470574" type="number" />
+                    <instance-variable name="direction" sid="7334803041652973" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="8581531616972675">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="2488201601295309">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Platform" sid="6308864628991449">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1225706424058824" speed="5">
+                        <frame duration="1" hotspotX="0.490909" hotspotY="0.5" original-source="E:\set.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="monsterSpawner" sid="6081416790853021">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="spawnedMonstersCount" sid="4116497697914205" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6010054570491339" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="meleeAttack" sid="6066446617199334">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128313884580452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemies" plugin-id="Sprite" sid="5008010868559932">
+            <members>
+                <member>monster1</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>GameLayout.xml</layout>
     </layout-folder>
