@@ -601,8 +601,8 @@
                         <x>1109</x>
                         <y>155.742996216</y>
                         <z>0</z>
-                        <width>55.459506989</width>
-                        <height>55.459506989</height>
+                        <width>8.31403923</width>
+                        <height>8.31403923</height>
                         <depth>0</depth>
                         <hotspotX>0.526315808</hotspotX>
                         <hotspotY>0.473684222</hotspotY>
@@ -732,11 +732,25 @@
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -970,7 +984,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1433.123046875</x>
-                        <y>282.933502197</y>
+                        <y>285.933502197</y>
                         <z>0</z>
                         <width>134</width>
                         <height>124</height>
@@ -1319,7 +1333,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1430.126831055</x>
-                        <y>333.436553955</y>
+                        <y>336.436553955</y>
                         <z>0</z>
                         <width>115</width>
                         <height>19</height>

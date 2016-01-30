@@ -20,6 +20,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -755,13 +756,7 @@
                     <type>playerCryAoeSource</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="2">
-                        <frame duration="2" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
                     </animation>
                 </animation-folder>
@@ -828,6 +823,9 @@
                     </behavior-type>
                     <behavior-type name="DestroyOutsideLayout" sid="4422701964999337">
                         <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="597124276466262">
+                        <behavior id="Physics" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>

@@ -84,10 +84,26 @@
                     <param id="0" name="Instance variable">spawnerId</param>
                     <param id="1" name="Value">enemyBoatSpawner.UID</param>
                 </action>
-                <action id="-8" name="Set angle" sid="763994447063336" type="enemyBoatPlatform">
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="763994447063336" type="enemyBoatPlatform">
                     <param id="0" name="Angle">enemyBoatSpawner.targetAngle</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="2101936869044222">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7080161116377736" type="enemyBoatSpawner">
+                            <param id="0" name="Instance variable">targetAngle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">180</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4763093603232502" type="enemyBoatPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="2793536926888351">
             <conditions>
@@ -96,7 +112,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="6098902964145353" type="enemyBoatPlatform">
+                <action behavior="Bullet" id="0" name="Set speed" sid="6098902964145353" type="enemyBoatPlatform">
                     <param id="0" name="Speed">0</param>
                 </action>
                 <action behavior="Bullet" disabled="1" id="2" name="Set gravity" sid="7478506795521686" type="enemyBoatPlatform">
@@ -105,8 +121,11 @@
                 <action disabled="1" id="-8" name="Set angle" sid="810960886803414" type="enemyBoatPlatform">
                     <param id="0" name="Angle">90</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9395761445169067" type="enemyBoatPlatform">
+                <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="9395761445169067" type="enemyBoatPlatform">
                     <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="1502044701222894" type="enemyBoatPlatform">
+                    <param id="0" name="Mode">1</param>
                 </action>
             </actions>
             <sub-events>
