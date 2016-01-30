@@ -16,7 +16,6 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -55,12 +54,6 @@
                 <behaviors>
                     <behavior-type name="Solid" sid="3614366900289677">
                         <behavior id="solid" />
-                    </behavior-type>
-                    <behavior-type name="Physics" sid="7570526321526805">
-                        <behavior id="Physics" />
-                    </behavior-type>
-                    <behavior-type name="Jumpthru" sid="3120543208018354">
-                        <behavior id="jumpthru" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -192,6 +185,32 @@
             </object-type>
             <object-type name="Mouse" sid="2973557831079676">
                 <plugin id="Mouse" />
+            </object-type>
+            <object-type name="oneSidePlatform" sid="7061969036564231">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="5081808725822364">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3926700460928425" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invisiablePlatform" sid="2582786408051573">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7297489679494761">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958402522177205" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
