@@ -193,6 +193,9 @@
             <object-type name="Mouse" sid="2973557831079676">
                 <plugin id="Mouse" />
             </object-type>
+            <object-type name="xyDetect" sid="3877146000096116">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />

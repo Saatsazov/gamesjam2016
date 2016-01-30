@@ -64,7 +64,7 @@
         <event-block sid="1437331214056075">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="984946728021352" type="System">
-                    <param id="0" name="Interval (seconds)">0.05</param>
+                    <param id="0" name="Interval (seconds)">0.040</param>
                 </condition>
             </conditions>
             <actions />
@@ -100,6 +100,19 @@
                         <action id="-10" name="Set value" sid="5097478257098729" type="monster1">
                             <param id="0" name="Instance variable">direction</param>
                             <param id="1" name="Value">directionRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="730327796105671">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="832872116792732" type="monster1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">player.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" disabled="1" id="7" name="Simulate control" sid="4019569427961182" type="monster1">
+                            <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -179,6 +192,98 @@
                     <param id="1" name="Value">monster1Damage</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block disabled="1" sid="5748100433783225">
+            <conditions>
+                <condition id="-15" name="Pick nearest/furthest" sid="2731292513046446" type="platform">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">monster1.X</param>
+                    <param id="2" name="Y">monster1.Y - monster1.Height</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="8327315980699993" type="platform">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">monster1.X</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="9999033147455226" type="platform">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">monster1.Y</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="945477874269463" type="player">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">monster1.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1630636016784332" type="platform">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="7879487999512927">
+                    <conditions>
+                        <condition disabled="1" id="-1" name="Compare X" sid="5501795256805678" type="platform">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">monster1.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="9272472305936079" type="monster1">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="211017177460325">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2191263178567694" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8334907456275146" type="xyDetect">
+                    <param id="0" name="Text">Mouse.X &amp; &quot; =&quot; &amp; Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="6021020304440279">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block disabled="1" sid="2067429239367917">
+            <conditions>
+                <condition id="-11" name="For Each" sid="238855794045738" type="System">
+                    <param id="0" name="Object">platform</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="7646142130862286">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7672084976856144" type="System">
+                            <param id="0" name="Object">monster1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="9496439271339134">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="110567153669863" type="platform">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">monster1.Y</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="9487090098899706" type="player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">monster1.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="6787766739949796" type="monster1">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
