@@ -20,6 +20,8 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -57,6 +59,9 @@
                     <behavior-type name="Physics" sid="7570526321526805">
                         <behavior id="Physics" />
                     </behavior-type>
+                    <behavior-type name="Jumpthru" sid="3120543208018354">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268901826072253" speed="5">
@@ -73,6 +78,9 @@
                 <behaviors>
                     <behavior-type name="Platform" sid="871749184582437">
                         <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="1544575305660839">
+                        <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -139,7 +147,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1225706424058824" speed="5">
-                        <frame duration="1" hotspotX="0.490909" hotspotY="0.5" original-source="E:\set.png" />
+                        <frame duration="1" hotspotX="0.49" hotspotY="0.5" original-source="E:\set.png" />
                     </animation>
                 </animation-folder>
             </object-type>
