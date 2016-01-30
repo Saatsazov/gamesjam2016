@@ -76,8 +76,33 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
-                        <frame duration="1" hotspotX="0.517588" hotspotY="0.507463" original-source="E:\2000px-Re-Horakhty.svg.png" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_pose_0000_Move.png">
+                            <collision-poly>
+                                <point x="0.357827" y="0" />
+                                <point x="0.801917" y="0" />
+                                <point x="0.693291" y="1" />
+                                <point x="0.408946" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="go" pingpong="1" repeatcount="1" repeatto="0" sid="3984311979093842" speed="5">
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
+                            <collision-poly>
+                                <point x="0.376997" y="1" />
+                                <point x="0.242811" y="0.00464037" />
+                                <point x="0.808307" y="0" />
+                                <point x="0.763578" y="0.990719" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
+                            <collision-poly>
+                                <point x="0.357827" y="0" />
+                                <point x="0.801917" y="0" />
+                                <point x="0.693291" y="1" />
+                                <point x="0.408946" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="2146921579121159" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />

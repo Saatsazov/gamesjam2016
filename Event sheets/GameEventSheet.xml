@@ -293,5 +293,27 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="923681636531263">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="3259510989561221" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9613365703066956" type="player">
+                    <param id="0" name="Animation">&quot;go&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3961088796272015">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="7835230892548509" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7894417787367948" type="player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
