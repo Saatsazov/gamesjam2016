@@ -3,36 +3,31 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MonsterSpawnLogic</name>
     <events>
+        <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
+        <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
+        <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
+        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">2</variable>
         <event-block sid="2946822416924864">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monsterSpawner">
+                <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monster1Spawner">
                     <param id="0" name="Instance variable">spawnedMonstersCount</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="2842891488383421" type="System">
-                    <param id="0" name="Variable">monstersCount</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">maxMonstersCount</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="780671596359118" type="System">
-                    <param id="0" name="Variable">monstersCount</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-11" name="Add to" sid="6531789006293336" type="monsterSpawner">
+                <action id="-11" name="Add to" sid="6531789006293336" type="monster1Spawner">
                     <param id="0" name="Instance variable">spawnedMonstersCount</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="6519644711558087" type="monsterSpawner">
+                <action id="0" name="Spawn another object" sid="6519644711558087" type="monster1Spawner">
                     <param id="0" name="Object">monster1</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-10" name="Set value" sid="8235188179910663" type="monster1">
                     <param id="0" name="Instance variable">spawnerId</param>
-                    <param id="1" name="Value">monsterSpawner.UID</param>
+                    <param id="1" name="Value">monster1Spawner.UID</param>
                 </action>
             </actions>
         </event-block>
@@ -44,18 +39,14 @@
             <sub-events>
                 <event-block sid="6729549924999383">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="6766196566253654" type="monsterSpawner">
+                        <condition id="-14" name="Pick by unique ID" sid="6766196566253654" type="monster1Spawner">
                             <param id="0" name="Unique ID">monster1.spawnerId</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="8705651559079239" type="monsterSpawner">
+                        <action id="-12" name="Subtract from" sid="8705651559079239" type="monster1Spawner">
                             <param id="0" name="Instance variable">spawnedMonstersCount</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6135875894825103" type="System">
-                            <param id="0" name="Variable">monstersCount</param>
-                            <param id="1" name="Value">monstersCount - 1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -69,6 +60,53 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="3927085242676373" type="enemyBoatPlatform">
                     <param id="0" name="Angle">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="4881805849024661">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6252515865086128" type="enemyBoatSpawner">
+                    <param id="0" name="Instance variable">spawnedBoatCount</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="3033278480509212" type="enemyBoatSpawner">
+                    <param id="0" name="Instance variable">spawnedBoatCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6878078540256884" type="enemyBoatSpawner">
+                    <param id="0" name="Object">enemyBoatPlatform</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8470020094635785" type="enemyBoatPlatform">
+                    <param id="0" name="Instance variable">spawnerId</param>
+                    <param id="1" name="Value">enemyBoatSpawner.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2793536926888351">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7015740535065761" type="enemyBoatPlatform">
+                    <param id="0" name="Object">enemyBoatTargetPosition</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="6098902964145353" type="enemyBoatPlatform">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="7478506795521686" type="enemyBoatPlatform">
+                    <param id="0" name="Gravity">300</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="681346140606818">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="5238312651434045" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5436725478518477" type="enemyBoatPlatform" />
             </actions>
         </event-block>
     </events>

@@ -8,8 +8,6 @@
         <include>MonsterLogic</include>
         <variable constant="0" name="isGameOver" sid="7907470040554158" static="0" type="text">false</variable>
         <variable constant="0" name="monster1Damage" sid="2552968877943907" static="0" type="number">43</variable>
-        <variable constant="0" name="monstersCount" sid="2363186824450788" static="0" type="number">0</variable>
-        <variable constant="0" name="maxMonstersCount" sid="6883606136917437" static="0" type="number">2</variable>
         <variable constant="0" name="directionLeft" sid="3650356626283203" static="0" type="number">0</variable>
         <variable constant="0" name="directionRight" sid="2910758584446361" static="0" type="number">1</variable>
         <event-block sid="6287266488576306">
