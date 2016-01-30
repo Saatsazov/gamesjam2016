@@ -125,6 +125,10 @@
                             <param id="0" name="Animation">&quot;attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="7902271494069071" type="sunBored">
+                            <param id="0" name="Animation">&quot;scared&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

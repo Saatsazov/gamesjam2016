@@ -2,5 +2,19 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SunLogic</name>
-    <events />
+    <events>
+        <event-block sid="9657887133211621">
+            <conditions>
+                <condition id="4" name="On finished" sid="8090006781579839" type="sunBored">
+                    <param id="0" name="Animation">&quot;scared&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="93285860574296" type="sunBored">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
