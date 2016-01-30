@@ -80,10 +80,10 @@
                     <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_pose_0000_Move.png">
                             <collision-poly>
-                                <point x="0.357827" y="0" />
-                                <point x="0.801917" y="0" />
-                                <point x="0.693291" y="1" />
-                                <point x="0.408946" y="1" />
+                                <point x="0.408945" y="0.00464037" />
+                                <point x="0.769968" y="0" />
+                                <point x="0.73163" y="1" />
+                                <point x="0.415336" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -91,15 +91,15 @@
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
                             <collision-poly>
                                 <point x="0.376997" y="1" />
-                                <point x="0.242811" y="0.00464037" />
-                                <point x="0.808307" y="0" />
+                                <point x="0.364217" y="0" />
+                                <point x="0.776358" y="0" />
                                 <point x="0.763578" y="0.990719" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
                             <collision-poly>
-                                <point x="0.357827" y="0" />
-                                <point x="0.801917" y="0" />
+                                <point x="0.415335" y="0" />
+                                <point x="0.763578" y="0" />
                                 <point x="0.693291" y="1" />
                                 <point x="0.408946" y="1" />
                             </collision-poly>
@@ -108,10 +108,28 @@
                     <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="2146921579121159" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501166" original-source="E:\Project\gamesjam2016\IMG\Ra_jump_0000_Move.png">
                             <collision-poly>
-                                <point x="0.27044" y="0.004662" />
-                                <point x="0.823899" y="0" />
+                                <point x="0.415094" y="0" />
+                                <point x="0.761006" y="0.004662" />
                                 <point x="0.716981" y="1" />
-                                <point x="0.522012" y="1" />
+                                <point x="0.440252" y="0.986014" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="9006707916402867" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_fight_0000_Move.png">
+                            <collision-poly>
+                                <point x="0.409091" y="0" />
+                                <point x="0.753247" y="0" />
+                                <point x="0.694805" y="1" />
+                                <point x="0.435065" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500935" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_fight_0001_Move.png">
+                            <collision-poly>
+                                <point x="0.396262" y="0" />
+                                <point x="0.637383" y="0" />
+                                <point x="0.6" y="1" />
+                                <point x="0.426168" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
