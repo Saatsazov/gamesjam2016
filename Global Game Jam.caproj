@@ -18,6 +18,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -195,6 +196,14 @@
             </object-type>
             <object-type name="enemyMeeleAttack" sid="4080741229885444">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isAttackPreparing" sid="7941021901997556" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="9546303176428108">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>monster1</type>
                     <type>enemyMeeleAttack</type>
