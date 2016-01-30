@@ -73,6 +73,9 @@
                         <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="7" name="Set mirrored" sid="186786372903635" type="screamAttack">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4807377064885937">
@@ -85,6 +88,9 @@
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="5754300240387017" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="7988375151321267" type="screamAttack">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -163,6 +169,39 @@
                 <action id="4" name="Set animation" sid="9566614999336794" type="player">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1391279574562953">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5108134813404006" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="3969541197729523" type="screamAttack">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-12" name="Subtract from" sid="5813780611082921" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2529164410816596" type="monster1">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="1" name="Set blend mode" sid="3126981084242066" type="Enemies">
+                    <param id="0" name="Blend mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8086922583806157">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5471554324128363" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3523276420637614" type="screamAttack">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">1</param>
                 </action>
             </actions>
         </event-block>

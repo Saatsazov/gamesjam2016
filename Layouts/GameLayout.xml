@@ -136,8 +136,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-88</x>
-                        <y>461</y>
+                        <x>264</x>
+                        <y>215</y>
                         <z>0</z>
                         <width>29</width>
                         <height>28</height>
@@ -646,6 +646,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="screamAttack" uid="26">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>181</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>1.008000016</hotspotX>
+                        <hotspotY>0.476000011</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -761,8 +786,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>135</x>
-                        <y>78</y>
+                        <x>203</x>
+                        <y>-53</y>
                         <z>0</z>
                         <width>649</width>
                         <height>30</height>
