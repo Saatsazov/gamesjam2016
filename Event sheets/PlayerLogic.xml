@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerLogic</name>
+    <events>
+        <event-block sid="1309289923295658">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3439916747575822" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5720163396099822" type="player">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">directionRight</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7989754601079259">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5320434487376113" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4965425191980589" type="player">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">directionLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5961837001535003">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="2091633500681562" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6838229785351745" type="player">
+                    <param id="0" name="Animation">&quot;go&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4224936009961679">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="388879556703493" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="270826289461907" type="player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7432936200642769">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="522786427252824" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3150220088566663">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1078913903471612" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4807377064885937">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="712834338110433" type="player">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5754300240387017" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6847918202193282">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6940213872547405" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5657440905471504" type="meleeAttack">
+                    <param id="0" name="X">player.X- player.Width</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5610337721752755">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2684804914225298" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="5537887755686718" type="meleeAttack">
+                    <param id="0" name="Object">monster1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="9500616677571553" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

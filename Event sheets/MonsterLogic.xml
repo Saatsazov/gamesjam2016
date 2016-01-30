@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MonsterLogic</name>
+    <events>
+        <event-block sid="157832267396995">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1245824610457941" type="monsterSpawner">
+                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="729473245252404" type="System">
+                    <param id="0" name="Variable">monstersCount</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">maxMonstersCount</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="7656351984421281" type="System">
+                    <param id="0" name="Variable">monstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="3854255425683032" type="monsterSpawner">
+                    <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4030602053552192" type="monsterSpawner">
+                    <param id="0" name="Object">monster1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="6103594691493629" type="monster1">
+                    <param id="0" name="Instance variable">spawnerId</param>
+                    <param id="1" name="Value">monsterSpawner.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6073770819198046">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="261255519082548" type="monster1" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2201864308554755">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5172341334647575" type="monsterSpawner">
+                            <param id="0" name="Unique ID">monster1.spawnerId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5723444969992022" type="monsterSpawner">
+                            <param id="0" name="Instance variable">spawnedMonstersCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6580211761404254" type="System">
+                            <param id="0" name="Variable">monstersCount</param>
+                            <param id="1" name="Value">monstersCount - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1437331214056075">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="984946728021352" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7587205177361713">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1082941715043511" type="monster1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4994353720077827" type="monster1">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5365321206772026" type="monster1">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">directionLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2974063286934829">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1723898000639113" type="monster1">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3873638842751405" type="monster1">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5097478257098729" type="monster1">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">directionRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4310872205434884">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7102503213526789" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3269049484829683" type="monster1" />
+            </actions>
+        </event-block>
+        <event-block sid="5833039786868811">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2304541537646157" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2975040213633723">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="227036635810488" type="monster1">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="2970039714425011" type="monster1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761723527760481">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2496124310120696" type="monster1">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">directionLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="6283623824862636" type="monster1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2804810766078181">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9139804903537761" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5407586940422499" type="enemyMeeleAttack">
+                    <param id="0" name="X">monster1.X - monster1.Width</param>
+                    <param id="1" name="Y">monster1.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6171788504636061">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7886636908360651" type="enemyMeeleAttack">
+                    <param id="0" name="Object">player</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="542272979499719" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="7514856403578967" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">monster1Damage</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
