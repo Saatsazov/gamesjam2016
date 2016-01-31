@@ -183,7 +183,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2516166725975637" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="2516166725975637" type="System">
                     <param id="0" name="Variable">isBossAppeared</param>
                     <param id="1" name="Value">true</param>
                 </action>
@@ -199,14 +199,14 @@
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="Y co-ordinate">apopTargetPosition1.Y</param>
                 </condition>
-                <condition id="-8" name="Compare two values" sid="3193326965071716" type="System">
+                <condition disabled="1" id="-8" name="Compare two values" sid="3193326965071716" type="System">
                     <param id="0" name="First value">wasOnPosition1</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="8379650375300001" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="8379650375300001" type="System">
                     <param id="0" name="Variable">wasOnPosition1</param>
                     <param id="1" name="Value">1</param>
                 </action>

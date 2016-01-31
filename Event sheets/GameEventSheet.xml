@@ -82,7 +82,7 @@
                 <condition id="-2" name="On start of layout" sid="9095159833357008" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="0" name="Play" sid="403159033441463" type="Audio">
+                <action id="0" name="Play" sid="403159033441463" type="Audio">
                     <param id="0" name="Audio file">StandAlone</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-20</param>
