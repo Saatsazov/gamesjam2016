@@ -514,7 +514,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="4107687749256986" speed="5">
-                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
+                        <frame duration="1" hotspotX="0.485185" hotspotY="0.529032" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
                             <collision-poly>
                                 <point x="0.103704" y="0.0903226" />
                                 <point x="0.5" y="0.00322581" />
