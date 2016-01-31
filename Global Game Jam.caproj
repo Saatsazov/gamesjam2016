@@ -1059,6 +1059,7 @@
     <sounds-folder>
         <file name="FusRoDah.ogg" />
         <file name="saber1.ogg" />
+        <file name="StandAlone.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
