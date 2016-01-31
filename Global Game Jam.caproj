@@ -10,6 +10,7 @@
     <unique-id>1e7yrg8c0isz9</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -586,8 +587,10 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="cry" pingpong="0" repeatcount="1" repeatto="0" sid="1031393583180275" speed="5">
+                    <animation framecount="4" loop="0" name="cry" pingpong="0" repeatcount="1" repeatto="0" sid="1031393583180275" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png" />
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" />
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png" />
                     </animation>
                 </animation-folder>
@@ -1006,6 +1009,9 @@
         <object-type name="Mouse" sid="2973557831079676">
             <plugin id="Mouse" />
         </object-type>
+        <object-type name="Audio" sid="4602091705402119">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="5008010868559932">
@@ -1035,8 +1041,25 @@
         <global-instance type="Keyboard" uid="32" />
         <global-instance type="Mouse" uid="33" />
         <global-instance type="Function" uid="34" />
+        <global-instance type="Audio" uid="49">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="FusRoDah.ogg" />
+        <file name="saber1.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

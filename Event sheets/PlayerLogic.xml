@@ -104,7 +104,12 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="522786427252824" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-3" name="Set position" sid="5657440905471504" type="meleeAttack">
+                    <param id="0" name="X">player.X- player.Width/2</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="3150220088566663">
                     <conditions>
@@ -115,10 +120,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="5657440905471504" type="meleeAttack">
-                            <param id="0" name="X">player.X- player.Width/2</param>
-                            <param id="1" name="Y">player.Y</param>
-                        </action>
                         <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
                             <param id="0" name="State">0</param>
                         </action>
@@ -208,6 +209,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="8647660500188983" type="Audio">
+                    <param id="0" name="Audio file">saber1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="4" name="Set animation" sid="1326943067691373" type="player">
                     <param id="0" name="Animation">&quot;attack&quot;</param>
                     <param id="1" name="From">1</param>
@@ -330,6 +337,20 @@
                     <param id="0" name="Animation">&quot;cry&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="0" name="Play" sid="8905043053802811" type="Audio">
+                    <param id="0" name="Audio file">FusRoDah</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="3223479817599416" type="System">
+                    <param id="0" name="Seconds">0.75</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="7217760550769763" type="player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
                 <action disabled="1" id="0" name="Spawn another object" sid="3835164344753567" type="playerCryAoeSource">
                     <param id="0" name="Object">playerCryAoe</param>
                     <param id="1" name="Layer">0</param>
@@ -363,6 +384,10 @@
                                     <param id="0" name="X">monster1.X - 300</param>
                                     <param id="1" name="Y">monster1.Y</param>
                                 </action>
+                                <action id="-12" name="Subtract from" sid="384425996437275" type="monster1">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="3581327411654995">
@@ -377,6 +402,10 @@
                                 <action id="-3" name="Set position" sid="4301921040903492" type="monster1">
                                     <param id="0" name="X">monster1.X + 300</param>
                                     <param id="1" name="Y">monster1.Y</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="3043783266584091" type="monster1">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
