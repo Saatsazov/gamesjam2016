@@ -839,7 +839,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8206676983254497" speed="5">
-                        <frame duration="1" hotspotX="1.14" hotspotY="0.472" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png" />
+                        <frame duration="1" hotspotX="-0.168" hotspotY="0.488" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png" />
                     </animation>
                 </animation-folder>
             </object-type>
