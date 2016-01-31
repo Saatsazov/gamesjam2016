@@ -2,5 +2,16 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SplashScreen</name>
-    <events />
+    <events>
+        <event-block sid="9272722637453413">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="5683460395777188" type="SplashScreenSprite" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8512547068598715" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

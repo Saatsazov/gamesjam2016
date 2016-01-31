@@ -39,7 +39,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Menu</first-layout>
+    <first-layout>SpashScreen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -519,9 +519,14 @@
             </object-type>
             <object-type name="SplashScreenSprite" sid="5504955105998195">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="8755606522293129">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5796559060739304" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\Title.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\Title.png" />
                     </animation>
                 </animation-folder>
             </object-type>
