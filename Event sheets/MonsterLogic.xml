@@ -16,9 +16,6 @@
             </conditions>
             <actions>
                 <action disabled="1" id="-9" name="Destroy" sid="3269049484829683" type="monster1" />
-                <action behavior="Solid" id="0" name="Set enabled" sid="6019543510397489" type="monster1">
-                    <param id="0" name="State">0</param>
-                </action>
                 <action behavior="Platform" id="11" name="Set enabled" sid="3947073037815195" type="monster1">
                     <param id="0" name="State">0</param>
                 </action>
@@ -192,7 +189,7 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="1806466800588398" type="monster1">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="9717008673769565" type="oneSidePlatform">
+                        <action disabled="1" id="-16" name="Set opacity" sid="9717008673769565" type="oneSidePlatform">
                             <param id="0" name="Opacity">30</param>
                         </action>
                     </actions>

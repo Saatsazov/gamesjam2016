@@ -55,18 +55,5 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5824648554875545">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="311489389205971" type="protectionFromFall">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Y co-ordinate">player.Y</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="916741375395415" type="player">
-                    <param id="0" name="Y">366</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

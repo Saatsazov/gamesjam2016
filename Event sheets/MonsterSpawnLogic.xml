@@ -199,9 +199,6 @@
                 <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="8684596722570845" type="monster1">
                     <param id="0" name="State">0</param>
                 </action>
-                <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="9940297045237677" type="monster1">
-                    <param id="0" name="State">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="4346461957939058">
