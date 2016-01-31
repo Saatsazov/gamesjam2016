@@ -117,6 +117,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GameOverText" sid="348698591046808">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="2762093759195817">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="xyDetect" sid="3877146000096116">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PlayAgaintText" sid="154379216827543">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="TiledBackground" sid="1096874322730613">
@@ -709,9 +723,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="gameOverMessage" sid="348698591046808">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="oneSidePlatform" sid="7061969036564231">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -737,9 +748,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="xyDetect" sid="3877146000096116">
-                <plugin id="Text" />
             </object-type>
             <object-type name="Function" sid="6458832183508705">
                 <plugin id="Function" />
