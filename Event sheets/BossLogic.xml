@@ -143,7 +143,7 @@
             <actions>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="7148188720343293" type="player">
                     <param id="0" name="Magnitude">20</param>
-                    <param id="1" name="Duration">0.6</param>
+                    <param id="1" name="Duration">0.4</param>
                     <param id="2" name="Mode">0</param>
                 </action>
                 <action behavior="CustomMovement" disabled="1" id="12" name="Set enabled" sid="6057145755201726" type="apop">
@@ -260,7 +260,7 @@
                 <action id="0" name="Set text" sid="2361556025275104" type="GameOverText">
                     <param id="0" name="Text">&quot;Да наступит новый день!&quot;</param>
                 </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="4531997662053711" type="GameOverText" />
+                <action behavior="Fade" id="1" name="Start fade" sid="4531997662053711" type="GameOverText" />
             </actions>
         </event-block>
         <event-block sid="2428980837172918">
@@ -271,6 +271,10 @@
                 <action id="-3" name="Set position" sid="7380555101583964" type="apop">
                     <param id="0" name="X">1740</param>
                     <param id="1" name="Y">1008</param>
+                </action>
+                <action id="-3" name="Set position" sid="5722218107043534" type="apopAtackSource">
+                    <param id="0" name="X">1633</param>
+                    <param id="1" name="Y">828</param>
                 </action>
             </actions>
         </event-block>

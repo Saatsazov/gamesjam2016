@@ -319,6 +319,11 @@
                 <condition id="-6" name="Every X seconds" sid="4570025022971819" type="System">
                     <param id="0" name="Interval (seconds)">4</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="8406403231146667" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="4821079780418165" type="eye">
@@ -353,9 +358,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="2377006948765325" type="eye" />
+                <action disabled="1" id="-9" name="Destroy" sid="2377006948765325" type="eye" />
                 <action id="-10" name="Add to" sid="9221376633772821" type="System">
                     <param id="0" name="Variable">killedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1516273291420817" type="eye">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action id="-10" name="Set value" sid="1475582218566342" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -376,6 +388,25 @@
                     <param id="0" name="Variable">killedMonstersCount</param>
                     <param id="1" name="Value">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="60312544167224">
+            <conditions>
+                <condition id="0" name="On click" sid="9323458067777318" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="2517964618099489">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="194027962994176" type="meleeAttack">
+                    <param id="0" name="Object">eyeAttack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8896694361126815" type="eyeAttack" />
             </actions>
         </event-block>
     </events>

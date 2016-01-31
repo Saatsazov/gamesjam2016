@@ -513,6 +513,20 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="4107687749256986" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
+                            <collision-poly>
+                                <point x="0.106618" y="0.0929487" />
+                                <point x="0.5" y="0.00641026" />
+                                <point x="0.886029" y="0.099359" />
+                                <point x="0.897059" y="0.5" />
+                                <point x="0.786765" y="0.814103" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0.213235" y="0.814103" />
+                                <point x="0.102941" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="BlackBackground" sid="5142772369669751">
@@ -787,14 +801,8 @@
                     <type>playerCryAoeSource</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="2">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
                     </animation>
                 </animation-folder>
             </object-type>
