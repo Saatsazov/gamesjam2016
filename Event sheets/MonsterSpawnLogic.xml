@@ -6,7 +6,7 @@
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
-        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">2</variable>
+        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">4</variable>
         <event-block sid="2946822416924864">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monster1Spawner">

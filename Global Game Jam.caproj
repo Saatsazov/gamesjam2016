@@ -1001,6 +1001,7 @@
     <layout-folder>
         <layout>GameLayout.xml</layout>
         <layout>Introduction.xml</layout>
+        <layout>Menu.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameEventSheet.xml</event-sheet>
@@ -1010,6 +1011,7 @@
         <event-sheet>SunLogic.xml</event-sheet>
         <event-sheet>IntroLogic.xml</event-sheet>
         <event-sheet>CloudSpawnLogic.xml</event-sheet>
+        <event-sheet>MenuLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="32" />
