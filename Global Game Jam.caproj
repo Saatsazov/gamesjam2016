@@ -787,8 +787,14 @@
                     <type>playerCryAoeSource</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="5">
+                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="2">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
                     </animation>
                 </animation-folder>
             </object-type>
