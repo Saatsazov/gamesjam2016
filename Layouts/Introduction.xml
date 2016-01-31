@@ -88,8 +88,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>103</y>
+                        <x>9</x>
+                        <y>503</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -139,8 +139,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>148</y>
+                        <x>9</x>
+                        <y>548</y>
                         <z>0</z>
                         <width>883</width>
                         <height>44</height>
@@ -190,8 +190,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>193</y>
+                        <x>9</x>
+                        <y>593</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -204,7 +204,7 @@
                 </instance>
                 <instance type="IntroText" uid="58">
                     <properties>
-                        <text>Ведь каждый вечер ему предстоит вести сражение с силами зла</text>
+                        <text>Каждый вечер ему предстоит вести сражение с силами зла</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29.3333,400,0</font>
                         <color>255,128,0</color>
@@ -241,8 +241,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>238</y>
+                        <x>9</x>
+                        <y>638</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -292,8 +292,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>283</y>
+                        <x>9</x>
+                        <y>683</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -343,8 +343,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106</x>
-                        <y>328</y>
+                        <x>9</x>
+                        <y>728</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
