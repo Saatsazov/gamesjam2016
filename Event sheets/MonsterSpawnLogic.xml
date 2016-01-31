@@ -8,7 +8,7 @@
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
-        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">4</variable>
+        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">6</variable>
         <event-block sid="2946822416924864">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monster1Spawner">
@@ -26,6 +26,9 @@
                     <param id="0" name="Object">monster1</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1400240555231209" type="System">
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-10" name="Set value" sid="8235188179910663" type="monster1">
                     <param id="0" name="Instance variable">spawnerId</param>
@@ -314,7 +317,7 @@
         <event-block sid="1091119255224734">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="4570025022971819" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
+                    <param id="0" name="Interval (seconds)">4</param>
                 </condition>
             </conditions>
             <actions>
@@ -341,6 +344,38 @@
                     <param id="1" name="Value">10</param>
                 </action>
                 <action id="-9" name="Destroy" sid="9917117581701332" type="eyeAttack" />
+            </actions>
+        </event-block>
+        <event-block sid="9964621098026204">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6506273510938269" type="playerCryAoe">
+                    <param id="0" name="Object">eye</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2377006948765325" type="eye" />
+                <action id="-10" name="Add to" sid="9221376633772821" type="System">
+                    <param id="0" name="Variable">killedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139097935168445">
+            <conditions>
+                <condition id="0" name="On click" sid="9843492434280619" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="4966035491827269" type="meleeAttack">
+                    <param id="0" name="Object">eye</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4659506320002893" type="eye" />
+                <action id="-10" name="Add to" sid="5499864360287878" type="System">
+                    <param id="0" name="Variable">killedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
