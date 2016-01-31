@@ -513,8 +513,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6979252496650909" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="4107687749256986" speed="5">
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
                             <collision-poly>
                                 <point x="0.103704" y="0.0903226" />
                                 <point x="0.5" y="0.00322581" />
@@ -801,8 +801,10 @@
                     <type>playerCryAoeSource</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6674104418957977" speed="1">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.473684" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -837,7 +839,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8206676983254497" speed="5">
-                        <frame duration="1" hotspotX="1.14" hotspotY="0.472" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png" />
+                        <frame duration="1" hotspotX="-0.168" hotspotY="0.488" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png" />
                     </animation>
                 </animation-folder>
             </object-type>
