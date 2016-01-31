@@ -227,6 +227,58 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="monster1Spawner" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <spawnedMonstersCount>0</spawnedMonstersCount>
+                        <isMonsterPlatfformEnabled>false</isMonsterPlatfformEnabled>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>194</x>
+                        <y>357</y>
+                        <z>0</z>
+                        <width>29</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="monster1Spawner" uid="83">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <spawnedMonstersCount>0</spawnedMonstersCount>
+                        <isMonsterPlatfformEnabled>false</isMonsterPlatfformEnabled>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2012</x>
+                        <y>401</y>
+                        <z>0</z>
+                        <width>29</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -509,8 +561,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>103</x>
-                        <y>48</y>
+                        <x>142</x>
+                        <y>1160</y>
                         <z>0</z>
                         <width>53.456802368</width>
                         <height>75.874168396</height>
@@ -1889,7 +1941,7 @@
                         <x>278</x>
                         <y>208</y>
                         <z>0</z>
-                        <width>357</width>
+                        <width>521</width>
                         <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
