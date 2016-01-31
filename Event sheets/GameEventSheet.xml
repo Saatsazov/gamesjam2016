@@ -103,9 +103,7 @@
                 <condition id="-2" name="On start of layout" sid="9095159833357008" type="System" />
             </conditions>
             <actions>
-                <action id="6" name="Stop" sid="6512428559825482" type="Audio">
-                    <param id="0" name="Tag">&quot;&quot;</param>
-                </action>
+                <action id="33" name="Stop all" sid="3151062436160099" type="Audio" />
                 <action id="0" name="Play" sid="403159033441463" type="Audio">
                     <param id="0" name="Audio file">StandAlone</param>
                     <param id="2" name="Loop">1</param>
@@ -117,11 +115,11 @@
         <event-block disabled="1" sid="9359974911526892">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1350928223468343" type="player">
-                    <param id="0" name="Object">sunBored</param>
+                    <param id="0" name="Object">healingArea</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="3675572983577862" type="player">
                     <param id="0" name="Instance variable">health</param>
-                    <param id="1" name="Comparison">2</param>
+                    <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">100</param>
                 </condition>
             </conditions>

@@ -257,10 +257,13 @@
                 <condition id="-19" name="On destroyed" sid="8782804879095438" type="apop" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="2361556025275104" type="GameOverText">
+                <action id="-15" name="Set visible" sid="8852013828832159" type="GameOverText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="5756731168627417" type="GameOverText">
                     <param id="0" name="Text">&quot;Да наступит новый день!&quot;</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="4531997662053711" type="GameOverText" />
+                <action behavior="Fade" id="1" name="Start fade" sid="8744721696964088" type="GameOverText" />
             </actions>
         </event-block>
         <event-block sid="2428980837172918">
