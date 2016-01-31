@@ -192,15 +192,15 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8556519622696884" speed="5">
-                        <frame duration="1" hotspotX="0.336283" hotspotY="0.45749" original-source="E:\Project\gamesjam2016\IMG\rostrum.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\rostrum.png">
                             <collision-poly>
-                                <point x="0.358408" y="0.477733" />
-                                <point x="0.336283" y="0.103238" />
-                                <point x="0.588496" y="0.226721" />
-                                <point x="0.526548" y="0.45749" />
-                                <point x="0.834071" y="0.912955" />
-                                <point x="0.336283" y="0.850202" />
-                                <point x="0.391593" y="0.406882" />
+                                <point x="0.516667" y="0.516667" />
+                                <point x="0.5" y="0.208333" />
+                                <point x="0.69" y="0.31" />
+                                <point x="0.643333" y="0.5" />
+                                <point x="0.875" y="0.875" />
+                                <point x="0.5" y="0.823333" />
+                                <point x="0.541667" y="0.458333" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -208,6 +208,11 @@
             </object-type>
             <object-type name="sunBored" sid="9928605325246894">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="8912936164653234">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="19" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="4426493495281386" speed="5">
                         <frame duration="1" hotspotX="0.493333" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun bored 0001.png">
@@ -513,8 +518,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="4107687749256986" speed="5">
-                        <frame duration="1" hotspotX="0.485185" hotspotY="0.529032" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="5859762714301218" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
                             <collision-poly>
                                 <point x="0.103704" y="0.0903226" />
                                 <point x="0.5" y="0.00322581" />
@@ -574,6 +579,9 @@
                     <behavior-type name="ScrollTo" sid="1544575305660839">
                         <behavior id="scrollto" />
                     </behavior-type>
+                    <behavior-type name="Bullet" sid="7209262573063731">
+                        <behavior id="Bullet" />
+                    </behavior-type>
                 </behaviors>
                 <container>
                     <type>player</type>
@@ -607,6 +615,20 @@
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.50116" />
                         <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="5029647090574604" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\dead ra.png">
+                            <collision-poly>
+                                <point x="0.245955" y="0.343891" />
+                                <point x="0.5" y="0.237557" />
+                                <point x="0.407767" y="0.828054" />
+                                <point x="0.527508" y="0.5" />
+                                <point x="0.512945" y="0.319005" />
+                                <point x="0.5" y="0.658371" />
+                                <point x="0.220065" y="0.692308" />
+                                <point x="0.158576" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
