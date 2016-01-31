@@ -49,47 +49,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="IntroFader" uid="70">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>424</x>
-                        <y>91</y>
-                        <z>0</z>
-                        <width>1186</width>
-                        <height>28</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Layer 1" sid="1147214392895172">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
                 <instance type="IntroText" uid="55">
                     <properties>
                         <text>Многие смертные считают служение богам трудным долгом</text>
@@ -129,8 +88,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>471</y>
+                        <x>106</x>
+                        <y>103</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -180,8 +139,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>516</y>
+                        <x>106</x>
+                        <y>148</y>
                         <z>0</z>
                         <width>883</width>
                         <height>44</height>
@@ -231,8 +190,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>561</y>
+                        <x>106</x>
+                        <y>193</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -245,7 +204,7 @@
                 </instance>
                 <instance type="IntroText" uid="58">
                     <properties>
-                        <text>Каждый вечер ему предстоит вести сражение с силами зла</text>
+                        <text>Ведь каждый вечер ему предстоит вести сражение с силами зла</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29.3333,400,0</font>
                         <color>255,128,0</color>
@@ -282,8 +241,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>606</y>
+                        <x>106</x>
+                        <y>238</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -333,8 +292,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>651</y>
+                        <x>106</x>
+                        <y>283</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -384,8 +343,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>9</x>
-                        <y>696</y>
+                        <x>106</x>
+                        <y>328</y>
                         <z>0</z>
                         <width>922</width>
                         <height>44</height>
@@ -396,7 +355,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="IntroFader" uid="70">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>424</x>
+                        <y>91</y>
+                        <z>0</z>
+                        <width>1186</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Layer 1" sid="1147214392895172">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>

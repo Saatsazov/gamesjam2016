@@ -260,7 +260,7 @@
                 <action id="0" name="Set text" sid="2361556025275104" type="GameOverText">
                     <param id="0" name="Text">&quot;Да наступит новый день!&quot;</param>
                 </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="4531997662053711" type="GameOverText" />
+                <action behavior="Fade" id="1" name="Start fade" sid="4531997662053711" type="GameOverText" />
             </actions>
         </event-block>
         <event-block sid="2428980837172918">

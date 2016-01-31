@@ -293,12 +293,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Physics" id="27" name="Set enabled" sid="155740210306894" type="eye">
-                    <param id="0" name="Mode">1</param>
-                </action>
                 <action id="-10" name="Set value" sid="3001723366808334" type="eye">
                     <param id="0" name="Instance variable">isKilledByPlayer</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="5531341558906232" type="eye">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="9580964830887713" type="eye">
+                    <param id="0" name="Gravity">300</param>
                 </action>
             </actions>
         </event-block>
@@ -362,10 +365,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="2377006948765325" type="eye" />
+                <action disabled="1" id="-9" name="Destroy" sid="2377006948765325" type="eye" />
                 <action id="-10" name="Add to" sid="9221376633772821" type="System">
                     <param id="0" name="Variable">killedMonstersCount</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="9559012475956836" type="eye">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="8682939923498468" type="eye">
+                    <param id="0" name="Gravity">300</param>
                 </action>
             </actions>
         </event-block>
@@ -389,8 +398,14 @@
                     <param id="0" name="Instance variable">isKilledByPlayer</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5435017360974378" type="eye">
+                <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="5435017360974378" type="eye">
                     <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4239678693388437" type="eye">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="866473635934776" type="eye">
+                    <param id="0" name="Gravity">300</param>
                 </action>
             </actions>
         </event-block>

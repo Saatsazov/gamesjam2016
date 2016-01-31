@@ -1632,7 +1632,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>251</x>
-                        <y>-54</y>
+                        <y>33</y>
                         <z>0</z>
                         <width>69.971420288</width>
                         <height>69.971420288</height>
@@ -1935,7 +1935,7 @@
                         <text>Мир погрузился во мрак</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Buxton Sketch,-37.3333,700,0</font>
-                        <color>51,0,51</color>
+                        <color>51,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

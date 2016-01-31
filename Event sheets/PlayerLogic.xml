@@ -251,6 +251,12 @@
                 <action id="3" name="Start" sid="8163258819550875" type="playerRangeAttackSource">
                     <param id="0" name="From">1</param>
                 </action>
+                <action id="0" name="Play" sid="1496653183251333" type="Audio">
+                    <param id="0" name="Audio file">Swing02</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6741791043847824">
