@@ -829,7 +829,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8206676983254497" speed="5">
-                        <frame duration="1" hotspotX="1.14" hotspotY="0.472" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png" />
+                        <frame duration="1" hotspotX="-0.076" hotspotY="0.464" original-source="E:\Projects\Games\!Global Game Jam\Animations\screamAttack\Default\000.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
