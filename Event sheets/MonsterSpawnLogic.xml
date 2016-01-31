@@ -280,6 +280,10 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="2427943142539534" type="eye">
                     <param id="0" name="Angle">eyeSpawner.spawnAngle</param>
                 </action>
+                <action id="-10" name="Set value" sid="5869283186988508" type="eye">
+                    <param id="0" name="Instance variable">targetAngle</param>
+                    <param id="1" name="Value">eyeSpawner.spawnAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1486900063344369">
@@ -318,6 +322,11 @@
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="4570025022971819" type="System">
                     <param id="0" name="Interval (seconds)">4</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4329313222099869" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -371,10 +380,45 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="4659506320002893" type="eye" />
+                <action disabled="1" id="-9" name="Destroy" sid="4659506320002893" type="eye" />
                 <action id="-10" name="Add to" sid="5499864360287878" type="System">
                     <param id="0" name="Variable">killedMonstersCount</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9040760476919525" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5435017360974378" type="eye">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8145981193617418">
+            <conditions>
+                <condition id="0" name="On click" sid="5227582226652723" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="7185717338766587" type="meleeAttack">
+                    <param id="0" name="Object">eyeAttack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6029281639613639" type="eyeAttack" />
+            </actions>
+        </event-block>
+        <event-block sid="2712947816210105">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8586825693336759" type="eye">
+                    <param id="0" name="Instance variable">targetAngle</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="2227636618151199" type="eye">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>

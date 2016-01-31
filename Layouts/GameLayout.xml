@@ -978,8 +978,8 @@
                         <width>133.11618042</width>
                         <height>64.815338135</height>
                         <depth>0</depth>
-                        <hotspotX>-0.075999998</hotspotX>
-                        <hotspotY>0.463999987</hotspotY>
+                        <hotspotX>1.139999986</hotspotX>
+                        <hotspotY>0.472000003</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
                     </world>
@@ -1172,11 +1172,11 @@
                         <x>1116.995849609</x>
                         <y>299.901885986</y>
                         <z>0</z>
-                        <width>187</width>
-                        <height>193</height>
+                        <width>270.361450195</width>
+                        <height>269.930053711</height>
                         <depth>0</depth>
-                        <hotspotX>0.491566271</hotspotX>
-                        <hotspotY>0.501165509</hotspotY>
+                        <hotspotX>0.49333334</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1670,6 +1670,7 @@
                     </properties>
                     <instance-variables>
                         <isKilledByPlayer>0</isKilledByPlayer>
+                        <targetAngle>0</targetAngle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -1708,7 +1709,7 @@
                         <height>85.841201782</height>
                         <depth>0</depth>
                         <hotspotX>0.557047009</hotspotX>
-                        <hotspotY>0.745635927</hotspotY>
+                        <hotspotY>0.254364103</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

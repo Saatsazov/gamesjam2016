@@ -210,7 +210,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="19" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="4426493495281386" speed="5">
-                        <frame duration="1" hotspotX="0.491566" hotspotY="0.501166" original-source="E:\Project\gamesjam2016\IMG\sun bored 0001.png">
+                        <frame duration="1" hotspotX="0.493333" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun bored 0001.png">
                             <collision-poly>
                                 <point x="0.301205" y="0.317016" />
                                 <point x="0.491566" y="0.221445" />
@@ -513,17 +513,17 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="4107687749256986" speed="5">
-                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6979252496650909" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\sun DEAD 0001.png">
                             <collision-poly>
-                                <point x="0.109511" y="0.095558" />
-                                <point x="0.5" y="0.0095743" />
-                                <point x="0.883191" y="0.101927" />
-                                <point x="0.894139" y="0.5" />
-                                <point x="0.784656" y="0.81209" />
-                                <point x="0.5" y="0.913996" />
-                                <point x="0.215344" y="0.81209" />
-                                <point x="0.105861" y="0.5" />
+                                <point x="0.103704" y="0.0903226" />
+                                <point x="0.5" y="0.00322581" />
+                                <point x="0.888889" y="0.0967742" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.788889" y="0.816129" />
+                                <point x="0.5" y="0.919355" />
+                                <point x="0.211111" y="0.816129" />
+                                <point x="0.1" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1228,6 +1228,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="isKilledByPlayer" sid="3374391551575148" type="number" />
+                    <instance-variable name="targetAngle" sid="896266168294514" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="7004509384292841">
