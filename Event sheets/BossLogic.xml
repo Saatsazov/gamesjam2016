@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BossLogic</name>
     <events>
-        <variable constant="0" name="apopHealth" sid="5280311895144543" static="0" type="number">100</variable>
+        <variable constant="0" name="isBossAppeared" sid="7822511655592905" static="0" type="number">0</variable>
+        <variable constant="0" name="wasOnPosition1" sid="8218003792687852" static="0" type="number">0</variable>
+        <variable constant="0" name="apopHealth" sid="5280311895144543" static="0" type="number">9</variable>
         <variable constant="0" name="apopAttackValue" sid="6959854013706912" static="0" type="number">25</variable>
         <event-block sid="1886503342135319">
             <conditions>
@@ -14,6 +16,11 @@
                     <param id="0" name="Instance variable">isAtacking</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">false</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7443917442187276" type="apop">
+                    <param id="0" name="Instance variable">isOnPosition</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">true</param>
                 </condition>
             </conditions>
             <actions>
@@ -77,18 +84,51 @@
                     <param id="0" name="Instance variable">health</param>
                     <param id="1" name="Value">apopAttackValue</param>
                 </action>
+                <action id="-9" name="Destroy" sid="9552867178087054" type="apopAttack" />
             </actions>
         </event-block>
-        <event-block sid="2485823685080139">
+        <event-block sid="5167666633705913">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="9197884875705411" type="apopAtackSource">
+                <condition id="0" name="On collision with another object" sid="2385143680723" type="apopAttack">
                     <param id="0" name="Object">apop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5869262408464942" type="apopAttack">
+                    <param id="0" name="Instance variable">isRepulsed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">true</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="3426936119555482" type="System">
                     <param id="0" name="Variable">apopHealth</param>
-                    <param id="1" name="Value">apopAttackValue</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9794793131257115" type="apopAttack" />
+                <action behavior="ScrollTo" id="0" name="Shake" sid="9562236747249856" type="player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4689669782342249">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="249440353957919" type="playerCryAoe">
+                    <param id="0" name="Object">apopAttack</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="6641194581574623" type="playerCryAoe">
+                    <param id="0" name="Comparison">1</param>
+                    <param id="1" name="Opacity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="7992982224063023" type="apopAttack">
+                    <param id="0" name="X">apopAtackSource.X</param>
+                    <param id="1" name="Y">apopAtackSource.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="301457816953981" type="apopAttack">
+                    <param id="0" name="Instance variable">isRepulsed</param>
+                    <param id="1" name="Value">true</param>
                 </action>
             </actions>
         </event-block>
@@ -101,7 +141,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Physics" id="27" name="Set enabled" sid="968891054739586" type="apop">
+                <action behavior="CustomMovement" disabled="1" id="12" name="Set enabled" sid="6057145755201726" type="apop">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="CustomMovement" disabled="1" id="6" name="Set angle of motion" sid="2291134980726689" type="apop">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="8749670839758043" type="apop">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">200</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="4191627331463621" type="apop">
                     <param id="0" name="Mode">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="3316081921649347" type="System">
@@ -109,9 +159,96 @@
                 </action>
                 <action id="-9" name="Destroy" sid="2947739095697556" type="apop" />
                 <action id="0" name="Set text" sid="2156799255026066" type="GameOverText">
-                    <param id="0" name="Text">&quot;Новый день настанет!&quot;</param>
+                    <param id="0" name="Text">&quot;Да наступит новый день!&quot;</param>
                 </action>
                 <action behavior="Fade" id="0" name="Restart fade" sid="2410146600461489" type="GameOverText" />
+            </actions>
+        </event-block>
+        <event-block sid="1827845366902014">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3330858311551574" type="System">
+                    <param id="0" name="Variable">isTimeForBoss</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">true</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5103259016612308" type="System">
+                    <param id="0" name="Variable">apopHealth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+                <condition disabled="1" id="-14" name="Compare variable" sid="7673891948076957" type="System">
+                    <param id="0" name="Variable">isBossAppeared</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2516166725975637" type="System">
+                    <param id="0" name="Variable">isBossAppeared</param>
+                    <param id="1" name="Value">true</param>
+                </action>
+                <action id="0" name="Call function" sid="4395619361820615" type="Function">
+                    <param id="0" name="Name">&quot;MoveApopToTarget&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3785198095401899">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="4261282256294624" type="apop">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">apopTargetPosition1.Y</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="3193326965071716" type="System">
+                    <param id="0" name="First value">wasOnPosition1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8379650375300001" type="System">
+                    <param id="0" name="Variable">wasOnPosition1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="CustomMovement" id="12" name="Set enabled" sid="713505602976659" type="apop">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8461329455948906" type="apop">
+                    <param id="0" name="Instance variable">isOnPosition</param>
+                    <param id="1" name="Value">true</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4919837934627678">
+            <conditions>
+                <condition id="0" name="On function" sid="3922281957441171" type="Function">
+                    <param id="0" name="Name">&quot;MoveApopToTarget&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="12" name="Set enabled" sid="9170739991554053" type="apop">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="3981460585037801" type="apop">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="2591010958207388" type="apop">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4168349316180439">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3529181943731208" type="playerRangeAttack">
+                    <param id="0" name="Object">apop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7335172659199979" type="System">
+                    <param id="0" name="Variable">apopHealth</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

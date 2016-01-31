@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -1011,43 +1012,54 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="apop" sid="3685114652276285">
+            <object-type global="1" name="apop" sid="3685114652276285">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="isAtacking" sid="2891640233555638" type="number" />
+                    <instance-variable name="isOnPosition" sid="4223054209109766" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="6712205724668657">
                         <behavior id="Timer" />
                     </behavior-type>
-                    <behavior-type name="Physics" sid="7854614137403739">
+                    <behavior-type name="CustomMovement" sid="5128116276246525">
+                        <behavior id="custom" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="6819850123342306">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="2821467270445946">
                         <behavior id="Physics" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>apop</type>
+                    <type>apopAtackSource</type>
+                </container>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="4534583712292588" speed="0.5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop.png">
                             <collision-poly>
-                                <point x="0.14" y="0.253949" />
-                                <point x="0" y="0.137097" />
-                                <point x="0.380833" y="0" />
-                                <point x="0.873334" y="0.283871" />
-                                <point x="0.305" y="0.905979" />
-                                <point x="0.05" y="1" />
-                                <point x="0.5625" y="0.474194" />
-                                <point x="0.571667" y="0.232258" />
+                                <point x="1" y="0.190234" />
+                                <point x="1" y="0.294764" />
+                                <point x="1" y="0.181425" />
+                                <point x="1" y="0.283871" />
+                                <point x="1" y="1" />
+                                <point x="1" y="0.904968" />
+                                <point x="1" y="0.452596" />
+                                <point x="1" y="0.234418" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop blink.png">
                             <collision-poly>
-                                <point x="0.133333" y="0.0862069" />
+                                <point x="0.241666" y="0.0323276" />
                                 <point x="0.5" y="0.0075431" />
                                 <point x="0.798333" y="0.130388" />
                                 <point x="0.858333" y="0.5" />
                                 <point x="0.66" y="0.780172" />
-                                <point x="0.5" y="0.920259" />
-                                <point x="0.155" y="0.899785" />
-                                <point x="0.601667" y="0.5" />
+                                <point x="0.0983333" y="0.926725" />
+                                <point x="0.478333" y="0.605604" />
+                                <point x="0.591667" y="0.309267" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1098,6 +1110,10 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+                <container>
+                    <type>apop</type>
+                    <type>apopAtackSource</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3584714742831856" speed="5">
                         <frame duration="1" hotspotX="0.636364" hotspotY="0.703704" />
@@ -1106,6 +1122,9 @@
             </object-type>
             <object-type name="apopAttack" sid="4072844783587411">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isRepulsed" sid="3059413520245486" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="DestroyOutsideLayout" sid="2700084149023547">
                         <behavior id="destroy" />
@@ -1164,6 +1183,134 @@
                                 <point x="0.888502" y="0.171123" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="apopTargetPosition1" sid="8992953627279264">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9936966787182829" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="apopTargetPosition2" sid="4909002934446432">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2452032178028844" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="apopTargetPosition3" sid="2315351081033619">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2132785826349536" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="eye" sid="4895318394916141">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isKilledByPlayer" sid="3374391551575148" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="7004509384292841">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="3393469786387481">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="8395410876961392">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="1129390698520836" speed="5">
+                        <frame duration="1" hotspotX="0.557047" hotspotY="0.745636" original-source="E:\Projects\Games\!Global Game Jam\IMG\an eye 0001.png">
+                            <collision-poly>
+                                <point x="0.114094" y="0.458853" />
+                                <point x="0.553691" y="0.00997506" />
+                                <point x="0.90604" y="0.526185" />
+                                <point x="0.986577" y="0.745636" />
+                                <point x="0.828859" y="0.907731" />
+                                <point x="0.553691" y="0.995012" />
+                                <point x="0.258389" y="0.925187" />
+                                <point x="0.0469799" y="0.745636" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.537736" hotspotY="0.74813" original-source="E:\Projects\Games\!Global Game Jam\IMG\an eye 0002.png">
+                            <collision-poly>
+                                <point x="0.091195" y="0.433915" />
+                                <point x="0.534591" y="0.00997506" />
+                                <point x="0.918239" y="0.483791" />
+                                <point x="0.940252" y="0.745636" />
+                                <point x="0.792453" y="0.907731" />
+                                <point x="0.534591" y="0.995012" />
+                                <point x="0.257862" y="0.925187" />
+                                <point x="0.0597484" y="0.745636" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.537736" hotspotY="0.74813" original-source="E:\Projects\Games\!Global Game Jam\IMG\an eye 0003.png">
+                            <collision-poly>
+                                <point x="0.091195" y="0.433915" />
+                                <point x="0.534591" y="0.00997506" />
+                                <point x="0.918239" y="0.483791" />
+                                <point x="0.940252" y="0.745636" />
+                                <point x="0.792453" y="0.907731" />
+                                <point x="0.534591" y="0.995012" />
+                                <point x="0.257862" y="0.925187" />
+                                <point x="0.0597484" y="0.745636" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.557047" hotspotY="0.745636" original-source="E:\Projects\Games\!Global Game Jam\IMG\an eye.png">
+                            <collision-poly>
+                                <point x="0.114094" y="0.458853" />
+                                <point x="0.553691" y="0.00997506" />
+                                <point x="0.90604" y="0.526185" />
+                                <point x="0.986577" y="0.745636" />
+                                <point x="0.828859" y="0.907731" />
+                                <point x="0.553691" y="0.995012" />
+                                <point x="0.258389" y="0.925187" />
+                                <point x="0.0469799" y="0.745636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite2" sid="8208055510635285">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974899373988317" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="eyeSpawner" sid="4692606480153019">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="spawnAngle" sid="6951512004654865" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7265999646040609" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="eyeAttack" sid="4527911303293621">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="5221980908052116">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="9380038590377703">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5333388562078961" speed="5">
+                        <frame duration="1" hotspotX="0.75" hotspotY="0.708333" />
                     </animation>
                 </animation-folder>
             </object-type>

@@ -4,7 +4,7 @@
     <name>MonsterSpawnLogic</name>
     <events>
         <variable constant="0" name="killedMonstersCount" sid="1960814841486422" static="0" type="number">0</variable>
-        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">1</variable>
+        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">5</variable>
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
@@ -258,6 +258,89 @@
                     <param id="1" name="Duration">0.8</param>
                     <param id="2" name="Mode">0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="8509490724516086" type="eye" />
+                <action id="-9" name="Destroy" sid="6879231028363347" type="eyeSpawner" />
+            </actions>
+        </event-block>
+        <event-block sid="2327898564256409">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9688169267582285" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="106161915307741" type="eyeSpawner">
+                    <param id="0" name="Object">eye</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2427943142539534" type="eye">
+                    <param id="0" name="Angle">eyeSpawner.spawnAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1486900063344369">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8780768520048361" type="playerRangeAttack">
+                    <param id="0" name="Object">eye</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="155740210306894" type="eye">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="3001723366808334" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3301533490187329">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="3589093826175044" type="eye" />
+                <condition id="-7" name="Compare instance variable" sid="6047034140678869" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="5176829626903036" type="System">
+                    <param id="0" name="Variable">killedMonstersCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1091119255224734">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4570025022971819" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4821079780418165" type="eye">
+                    <param id="0" name="Object">eyeAttack</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="6754267023307589" type="eyeAttack">
+                    <param id="0" name="X">player.X</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="731365647976523">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2530220687481551" type="eyeAttack">
+                    <param id="0" name="Object">player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="9309841166580517" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9917117581701332" type="eyeAttack" />
             </actions>
         </event-block>
     </events>

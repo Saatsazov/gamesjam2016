@@ -73,6 +73,9 @@
                     <param id="0" name="X">monster1.X - monster1.Width/2</param>
                     <param id="1" name="Y">monster1.Y</param>
                 </action>
+                <action id="0" name="Set text" sid="3231292744304773" type="xyDetect">
+                    <param id="0" name="Text">Mouse.X &amp; &quot; =&quot; &amp; Mouse.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6171788504636061">
@@ -138,16 +141,6 @@
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="211017177460325">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="2191263178567694" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="8334907456275146" type="xyDetect">
-                    <param id="0" name="Text">Mouse.X &amp; &quot; =&quot; &amp; Mouse.Y</param>
-                </action>
-            </actions>
         </event-block>
         <event-block sid="7100497970787941">
             <conditions>

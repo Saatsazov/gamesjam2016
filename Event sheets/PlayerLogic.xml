@@ -11,9 +11,6 @@
                 <condition id="2" name="Key is down" sid="3439916747575822" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
                 </condition>
-                <condition disabled="1" id="2" name="Key is down" sid="4512729818522086" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="5720163396099822" type="player">
@@ -26,9 +23,6 @@
             <conditions>
                 <condition id="2" name="Key is down" sid="5320434487376113" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition disabled="1" id="2" name="Key is down" sid="6216422409308797" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
@@ -344,18 +338,11 @@
                         <condition id="1" name="Is overlapping another object" sid="8991285208537631" type="playerCryAoe">
                             <param id="0" name="Object">monster1</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="2156668770946922" type="playerCryAoe">
-                            <param id="0" name="Object">apopAttack</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="5231973443483538" type="monster1">
                             <param id="0" name="Instance variable">isKilledByPlayer</param>
                             <param id="1" name="Value">true</param>
-                        </action>
-                        <action id="-22" name="Set angle toward position" sid="8798609433251753" type="apopAttack">
-                            <param id="0" name="X">apopAtackSource.X</param>
-                            <param id="1" name="Y">apopAtackSource.Y</param>
                         </action>
                     </actions>
                     <sub-events>
