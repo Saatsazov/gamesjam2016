@@ -99,6 +99,10 @@
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;enemyAttackTimer&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="6325180599636898" type="monster1">
+                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3055811027172836">
