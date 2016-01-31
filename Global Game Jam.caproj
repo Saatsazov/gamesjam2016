@@ -513,6 +513,18 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="BlackBackground" sid="5142772369669751">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="SplashScreenSprite" sid="5504955105998195">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5796559060739304" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\Title.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Game">
             <object-type name="platform" sid="5505656349022332">
@@ -1001,6 +1013,7 @@
         <layout>GameLayout.xml</layout>
         <layout>Introduction.xml</layout>
         <layout>Menu.xml</layout>
+        <layout>SpashScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameEventSheet.xml</event-sheet>
@@ -1011,6 +1024,7 @@
         <event-sheet>IntroLogic.xml</event-sheet>
         <event-sheet>CloudSpawnLogic.xml</event-sheet>
         <event-sheet>MenuLogic.xml</event-sheet>
+        <event-sheet>SplashScreen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="32" />

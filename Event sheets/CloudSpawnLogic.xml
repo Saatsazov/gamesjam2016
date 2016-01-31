@@ -85,9 +85,5 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="8281423034716767">
-            <conditions />
-            <actions />
-        </event-block>
     </events>
 </c2eventsheet>

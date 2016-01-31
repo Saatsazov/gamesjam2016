@@ -9,7 +9,7 @@
         <include>PlayerLogic</include>
         <include>MonsterLogic</include>
         <variable constant="0" name="isGameOver" sid="7907470040554158" static="0" type="text">false</variable>
-        <variable constant="0" name="monster1Damage" sid="2552968877943907" static="0" type="number">20</variable>
+        <variable constant="0" name="monster1Damage" sid="2552968877943907" static="0" type="number">43</variable>
         <variable constant="0" name="directionLeft" sid="3650356626283203" static="0" type="number">0</variable>
         <variable constant="0" name="directionRight" sid="2910758584446361" static="0" type="number">1</variable>
         <event-block sid="6287266488576306">
@@ -21,17 +21,6 @@
                     <param id="0" name="Text">&quot;Здоровье :&quot; &amp; player.health</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block disabled="1" sid="3947535644185031">
-            <conditions>
-                <condition id="1" name="On any click" sid="9580185152067758" type="Mouse" />
-                <condition id="-14" name="Compare variable" sid="5966444617728966" type="System">
-                    <param id="0" name="Variable">isGameOver</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;true&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="61421752511124">
             <conditions>

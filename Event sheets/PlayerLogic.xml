@@ -100,17 +100,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8478192901847072">
-            <conditions>
-                <condition behavior="Platform" id="8" name="On moved" sid="1182934625100102" type="player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="1188919301628025" type="player">
-                    <param id="0" name="Animation">&quot;go&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="7432936200642769">
             <conditions>
                 <condition id="-1" name="Every tick" sid="522786427252824" type="System" />
@@ -126,6 +115,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Set position" sid="5657440905471504" type="meleeAttack">
+                            <param id="0" name="X">player.X- player.Width/2</param>
+                            <param id="1" name="Y">player.Y</param>
+                        </action>
                         <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
                             <param id="0" name="State">0</param>
                         </action>
@@ -159,35 +152,9 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="6847918202193282">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="6940213872547405" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="5657440905471504" type="meleeAttack">
-                    <param id="0" name="X">player.X- player.Width/2</param>
-                    <param id="1" name="Y">player.Y</param>
-                </action>
-                <action disabled="1" id="-3" name="Set position" sid="7110250507810931" type="playerRangeAttackSource">
-                    <param id="0" name="X">player.X</param>
-                    <param id="1" name="Y">player.Y - player.Height / 3</param>
-                </action>
-                <action disabled="1" id="-22" name="Set angle toward position" sid="3587090977934375" type="playerRangeAttackSource">
-                    <param id="0" name="X">Mouse.X</param>
-                    <param id="1" name="Y">Mouse.Y</param>
-                </action>
-                <action disabled="1" id="-3" name="Set position" sid="214103135960279" type="playerCryAoeSource">
-                    <param id="0" name="X">player.X - player.Width/2</param>
-                    <param id="1" name="Y">player.Y - player.Height/3</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="8556666356969384">
             <conditions>
                 <condition behavior="Platform" id="5" name="On jump" sid="2294582316148188" type="player" />
-                <condition id="2" inverted="1" name="Is playing" sid="4989142859470942" type="player">
-                    <param id="0" name="Animation">&quot;attack&quot;</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="8974554108788187" type="player">
@@ -199,7 +166,6 @@
         <event-block sid="4629068056425226">
             <conditions>
                 <condition behavior="Platform" id="9" name="On landed" sid="2968129951028446" type="player" />
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="6459568534342144" type="player" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="1143419189772924" type="player">
