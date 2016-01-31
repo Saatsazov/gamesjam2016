@@ -4,7 +4,7 @@
     <name>MonsterSpawnLogic</name>
     <events>
         <variable constant="0" name="killedMonstersCount" sid="1960814841486422" static="0" type="number">0</variable>
-        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">0</variable>
+        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">20</variable>
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
@@ -451,6 +451,20 @@
                     <param id="0" name="Variable">killedMonstersCount</param>
                     <param id="1" name="Value">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="5030731882016552">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5512173964879958" type="Keyboard">
+                    <param id="0" name="Key">192 (`)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1268956554237745" type="monster1">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5298511910331879" type="monster1" />
             </actions>
         </event-block>
     </events>
