@@ -11,7 +11,7 @@
                 <condition id="2" name="Key is down" sid="3439916747575822" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="4512729818522086" type="Keyboard">
+                <condition disabled="1" id="2" name="Key is down" sid="4512729818522086" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
@@ -27,7 +27,7 @@
                 <condition id="2" name="Key is down" sid="5320434487376113" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="6216422409308797" type="Keyboard">
+                <condition disabled="1" id="2" name="Key is down" sid="6216422409308797" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
@@ -35,42 +35,6 @@
                 <action id="-10" name="Set value" sid="4965425191980589" type="player">
                     <param id="0" name="Instance variable">direction</param>
                     <param id="1" name="Value">directionLeft</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1133064110011278">
-            <conditions>
-                <condition id="2" name="Key is down" sid="3708885256432635" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="6392988127877548" type="player">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2457081841609375">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4784073651509139" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="6628106637391089" type="player">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="21537403169602">
-            <conditions>
-                <condition id="2" name="Key is down" sid="7516049631400605" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="3126717374064321" type="player">
-                    <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
@@ -232,6 +196,10 @@
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="2585228663976066" type="monster1">
+                            <param id="0" name="Instance variable">isKilledByPlayer</param>
+                            <param id="1" name="Value">true</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -301,6 +269,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-10" name="Set value" sid="8240694232482337" type="monster1">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Value">true</param>
+                </action>
                 <action id="-10" name="Set value" sid="9263313935165482" type="monster1">
                     <param id="0" name="Instance variable">health</param>
                     <param id="1" name="Value">0</param>
@@ -369,7 +341,12 @@
                             <param id="0" name="Object">monster1</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="5231973443483538" type="monster1">
+                            <param id="0" name="Instance variable">isKilledByPlayer</param>
+                            <param id="1" name="Value">true</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="323837893095208">
                             <conditions>

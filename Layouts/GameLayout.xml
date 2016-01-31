@@ -5,7 +5,7 @@
     <event-sheet>GameEventSheet</event-sheet>
     <size>
         <width>2500</width>
-        <height>960</height>
+        <height>700</height>
     </size>
     <margins>
         <horizontal>1000</horizontal>
@@ -299,6 +299,7 @@
                         <spawnerId>0</spawnerId>
                         <direction>0</direction>
                         <isHuntingPlayer>1</isHuntingPlayer>
+                        <isKilledByPlayer>0</isKilledByPlayer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1392,6 +1393,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Apop" uid="53">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-515</x>
+                        <y>39</y>
+                        <z>0</z>
+                        <width>424.245697021</width>
+                        <height>656.166625977</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bossSpawner" uid="51">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1980</x>
+                        <y>380</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1411,12 +1456,12 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="dayIndicator" uid="11">
+                <instance type="killedMonstersIndicator" uid="11">
                     <properties>
-                        <text>Первые врата</text>
+                        <text>Поверженные враги: 0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,153,0</color>
+                        <color>255,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -1426,10 +1471,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-322</x>
-                        <y>25</y>
+                        <x>10</x>
+                        <y>11</y>
                         <z>0</z>
-                        <width>238</width>
+                        <width>454</width>
                         <height>44</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1453,7 +1498,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>581</x>
+                        <x>626</x>
                         <y>11</y>
                         <z>0</z>
                         <width>255</width>

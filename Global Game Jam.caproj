@@ -595,7 +595,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="dayIndicator" sid="1079052074501649">
+            <object-type name="killedMonstersIndicator" sid="1079052074501649">
                 <plugin id="Text" />
             </object-type>
             <object-type name="healthIndicator" sid="6294868982349647">
@@ -608,6 +608,7 @@
                     <instance-variable name="spawnerId" sid="611402914470574" type="number" />
                     <instance-variable name="direction" sid="7334803041652973" type="number" />
                     <instance-variable name="isHuntingPlayer" sid="1585230126886897" type="number" />
+                    <instance-variable name="isKilledByPlayer" sid="1804983282117614" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="DestroyOutsideLayout" sid="2488201601295309">
@@ -1002,6 +1003,33 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bossSpawner" sid="68907556366502">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2186654744215063" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Apop" sid="3685114652276285">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4534583712292588" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop.png">
+                            <collision-poly>
+                                <point x="0.133333" y="0.0862069" />
+                                <point x="0.5" y="0.0075431" />
+                                <point x="0.798333" y="0.130388" />
+                                <point x="0.858334" y="0.5" />
+                                <point x="0.66" y="0.780173" />
+                                <point x="0.5" y="0.920258" />
+                                <point x="0.155" y="0.899785" />
+                                <point x="0.601667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="7551855179890822">
             <plugin id="Keyboard" />
@@ -1036,6 +1064,7 @@
         <event-sheet>CloudSpawnLogic.xml</event-sheet>
         <event-sheet>MenuLogic.xml</event-sheet>
         <event-sheet>SplashScreen.xml</event-sheet>
+        <event-sheet>BossLogic.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="32" />

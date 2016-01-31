@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BossLogic</name>
+    <events>
+        <event-block sid="7118647327462147">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="694294318434911" type="System">
+                    <param id="0" name="Variable">isTimeForBoss</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">true</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8420847186793403" type="bossSpawner">
+                    <param id="0" name="Object">Apop</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8042210381739927">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4568832552765643" type="System">
+                    <param id="0" name="Variable">killedMonstersCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="737918436010427" type="bossSpawner">
+                    <param id="0" name="Object">Apop</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
+        <include>BossLogic</include>
+        <variable constant="0" name="isTimeForBoss" sid="3286740976118419" static="0" type="number">0</variable>
         <include>CloudSpawnLogic</include>
         <include>SunLogic</include>
         <include>MonsterSpawnLogic</include>
@@ -19,6 +21,9 @@
             <actions>
                 <action id="0" name="Set text" sid="7403312855348956" type="healthIndicator">
                     <param id="0" name="Text">&quot;Здоровье :&quot; &amp; player.health</param>
+                </action>
+                <action id="0" name="Set text" sid="364028663570032" type="killedMonstersIndicator">
+                    <param id="0" name="Text">&quot;Поверженные враги: &quot; &amp; killedMonstersCount</param>
                 </action>
             </actions>
         </event-block>
@@ -76,7 +81,7 @@
                 <condition id="-2" name="On start of layout" sid="9095159833357008" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="403159033441463" type="Audio">
+                <action disabled="1" id="0" name="Play" sid="403159033441463" type="Audio">
                     <param id="0" name="Audio file">StandAlone</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-20</param>

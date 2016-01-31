@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MonsterSpawnLogic</name>
     <events>
+        <variable constant="0" name="killedMonstersCount" sid="1960814841486422" static="0" type="number">0</variable>
+        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">1</variable>
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
@@ -37,6 +39,21 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-block sid="9015548375758404">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9034591448727291" type="monster1">
+                            <param id="0" name="Instance variable">isKilledByPlayer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">true</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4357701337071199" type="System">
+                            <param id="0" name="Variable">killedMonstersCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6729549924999383">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="6766196566253654" type="monster1Spawner">
@@ -209,6 +226,37 @@
                 <action id="-10" name="Set value" sid="4754792167290899" type="monster1">
                     <param id="0" name="Instance variable">isHuntingPlayer</param>
                     <param id="1" name="Value">true</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3144523000165868">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="5535176683095748" type="System">
+                    <param id="0" name="First value">killedMonstersCount</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">requiredMonsterKills</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3874088629386257" type="System">
+                    <param id="0" name="Variable">isTimeForBoss</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">false</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3986369405329666" type="System">
+                    <param id="0" name="Variable">isTimeForBoss</param>
+                    <param id="1" name="Value">true</param>
+                </action>
+                <action id="-9" name="Destroy" sid="205752583512657" type="enemyBoatSpawner" />
+                <action id="-9" name="Destroy" sid="7691776323861444" type="monster1Spawner" />
+                <action id="-10" name="Set value" sid="9701191144275676" type="monster1">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="5293014733425342" type="player">
+                    <param id="0" name="Magnitude">30</param>
+                    <param id="1" name="Duration">0.8</param>
+                    <param id="2" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>
