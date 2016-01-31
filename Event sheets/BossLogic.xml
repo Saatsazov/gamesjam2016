@@ -143,7 +143,7 @@
             <actions>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="7148188720343293" type="player">
                     <param id="0" name="Magnitude">20</param>
-                    <param id="1" name="Duration">0.6</param>
+                    <param id="1" name="Duration">0.4</param>
                     <param id="2" name="Mode">0</param>
                 </action>
                 <action behavior="CustomMovement" disabled="1" id="12" name="Set enabled" sid="6057145755201726" type="apop">
