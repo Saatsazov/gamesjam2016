@@ -305,6 +305,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-22" name="Set angle toward position" sid="9537331430861551" type="playerCryAoe">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
                 <action id="4" name="Set animation" sid="3517681554275499" type="player">
                     <param id="0" name="Animation">&quot;cry&quot;</param>
                     <param id="1" name="From">1</param>
@@ -335,16 +339,23 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="4418786928060952">
+                <event-block any="1" sid="4418786928060952">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="8991285208537631" type="playerCryAoe">
                             <param id="0" name="Object">monster1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="2156668770946922" type="playerCryAoe">
+                            <param id="0" name="Object">apopAttack</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="5231973443483538" type="monster1">
                             <param id="0" name="Instance variable">isKilledByPlayer</param>
                             <param id="1" name="Value">true</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="8798609433251753" type="apopAttack">
+                            <param id="0" name="X">apopAtackSource.X</param>
+                            <param id="1" name="Y">apopAtackSource.Y</param>
                         </action>
                     </actions>
                     <sub-events>

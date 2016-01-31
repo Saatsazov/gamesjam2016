@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEventSheet</name>
     <events>
+        <include>OnStartOfLayout</include>
         <include>BossLogic</include>
         <variable constant="0" name="isTimeForBoss" sid="3286740976118419" static="0" type="number">0</variable>
         <include>CloudSpawnLogic</include>

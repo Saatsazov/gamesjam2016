@@ -3,36 +3,115 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BossLogic</name>
     <events>
-        <event-block sid="7118647327462147">
+        <variable constant="0" name="apopHealth" sid="5280311895144543" static="0" type="number">100</variable>
+        <variable constant="0" name="apopAttackValue" sid="6959854013706912" static="0" type="number">25</variable>
+        <event-block sid="1886503342135319">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="694294318434911" type="System">
-                    <param id="0" name="Variable">isTimeForBoss</param>
+                <condition behavior="Timer" id="0" name="On timer" sid="266382737279447" type="apop">
+                    <param id="0" name="Tag">&quot;AtackTimer&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9076896687094921" type="apop">
+                    <param id="0" name="Instance variable">isAtacking</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">true</param>
+                    <param id="2" name="Value">false</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="8420847186793403" type="bossSpawner">
-                    <param id="0" name="Object">Apop</param>
+                <action id="-10" name="Set value" sid="1803588512204595" type="apop">
+                    <param id="0" name="Instance variable">isAtacking</param>
+                    <param id="1" name="Value">true</param>
+                </action>
+                <action id="4" name="Set animation" sid="3751021825155576" type="apop">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8814742306853444" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4787032590163282" type="apopAtackSource">
+                    <param id="0" name="Object">apopAttack</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="9252635305663622" type="apopAttack">
+                    <param id="0" name="X">player.X</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="1207062929562607" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="4" name="Set animation" sid="7549831544326046" type="apop">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="4947720519994304" type="apop">
+                    <param id="0" name="Instance variable">isAtacking</param>
+                    <param id="1" name="Value">false</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8042210381739927">
+        <event-block sid="1655304449445772">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="4568832552765643" type="System">
-                    <param id="0" name="Variable">killedMonstersCount</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
+                <condition id="-2" name="On start of layout" sid="8721226435256975" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="8573721482829073" type="apop">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;AtackTimer&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2406728742450129" type="apopAtackSource">
+                    <param id="0" name="Pin to">apop</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9909234913131571">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8874684616823548" type="apopAttack">
+                    <param id="0" name="Object">player</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="737918436010427" type="bossSpawner">
-                    <param id="0" name="Object">Apop</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+                <action id="-12" name="Subtract from" sid="9533299416870593" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">apopAttackValue</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="2485823685080139">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9197884875705411" type="apopAtackSource">
+                    <param id="0" name="Object">apop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="3426936119555482" type="System">
+                    <param id="0" name="Variable">apopHealth</param>
+                    <param id="1" name="Value">apopAttackValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5949185831178342">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9364139819726463" type="System">
+                    <param id="0" name="First value">apopHealth</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="968891054739586" type="apop">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="3316081921649347" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2947739095697556" type="apop" />
+                <action id="0" name="Set text" sid="2156799255026066" type="GameOverText">
+                    <param id="0" name="Text">&quot;Новый день настанет!&quot;</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="2410146600461489" type="GameOverText" />
             </actions>
         </event-block>
     </events>
