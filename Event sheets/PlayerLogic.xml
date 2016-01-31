@@ -254,6 +254,9 @@
                     <param id="0" name="Variable">superAbilityState</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="3" name="Start" sid="8163258819550875" type="playerRangeAttackSource">
+                    <param id="0" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6741791043847824">
@@ -330,6 +333,9 @@
                 <action id="-9" name="Set value" sid="1742887296895458" type="System">
                     <param id="0" name="Variable">superAbilityState</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="3" name="Start" sid="7862593487975217" type="playerRangeAttackSource">
+                    <param id="0" name="From">1</param>
                 </action>
             </actions>
             <sub-events>
