@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Global Game Jam</name>
-    <description>Space shootemup</description>
+    <description>Action Platformer</description>
     <version>1.0.0.0</version>
-    <author>Scirra</author>
+    <author>Sigma Software</author>
     <author-email></author-email>
     <author-website></author-website>
-    <app-id>com.scirra.spaceblaster</app-id>
+    <app-id>Ritual of Ra</app-id>
     <unique-id>1e7yrg8c0isz9</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
@@ -39,11 +39,13 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
@@ -55,6 +57,65 @@
         <object-folder name="Title">
             <object-type name="IntroText" sid="7465453761305084">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="isLast" sid="7092267071495774" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="4272328889676258">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="6524546916742119">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="PlayText" sid="1030863915678207">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="AuthorsText" sid="6869419117821405">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="IntroFader" sid="8848549154748766">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6639358189718357" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="KhaiLogo" sid="358052085881022">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5727234755362489" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\logo-Khai.png">
+                            <collision-poly>
+                                <point x="0.00560538" y="0.0103734" />
+                                <point x="0.5" y="0.381743" />
+                                <point x="0.994395" y="0.0103734" />
+                                <point x="0.998879" y="0.997925" />
+                                <point x="0.00112108" y="0.997925" />
+                                <point x="0.153587" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SigmaSoftwareLogo" sid="4294406085904593">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5537483219945949" speed="5">
+                        <frame duration="1" hotspotX="0.501247" hotspotY="0.508929" original-source="E:\Projects\Games\!Global Game Jam\IMG\view_logo_sigma_software.png">
+                            <collision-poly>
+                                <point x="0.104738" y="0.205357" />
+                                <point x="0.850374" y="0.375" />
+                                <point x="0.997506" y="0.508929" />
+                                <point x="0.501247" y="0.982143" />
+                                <point x="0.104738" y="0.8125" />
+                                <point x="0.00249377" y="0.508929" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Backgrounds">

@@ -2,5 +2,22 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MenuLogic</name>
-    <events />
+    <events>
+        <event-block sid="6363086478230099">
+            <conditions>
+                <condition id="0" name="On click" sid="6915657712641047" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="9688553584905315" type="Mouse">
+                    <param id="0" name="Object">PlayText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7387215692875476" type="System">
+                    <param id="0" name="Layout">Introduction</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
