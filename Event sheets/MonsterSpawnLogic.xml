@@ -8,7 +8,7 @@
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>
-        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">4</variable>
+        <variable constant="0" name="maxMonsters1Count" sid="1098392094096311" static="0" type="number">6</variable>
         <event-block sid="2946822416924864">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="9184146685642126" type="monster1Spawner">
@@ -362,6 +362,10 @@
         </event-block>
         <event-block sid="139097935168445">
             <conditions>
+                <condition id="0" name="On click" sid="9843492434280619" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
                 <condition id="1" name="Is overlapping another object" sid="4966035491827269" type="meleeAttack">
                     <param id="0" name="Object">eye</param>
                 </condition>

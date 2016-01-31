@@ -75,6 +75,7 @@
             <actions>
                 <action id="-26" name="Restart layout" sid="8337923423053532" type="System" />
                 <action id="-21" name="Reset global variables" sid="2538795598037656" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="1380819001658589" type="System" />
             </actions>
         </event-block>
         <event-block sid="1580940933710689">
@@ -82,6 +83,9 @@
                 <condition id="-2" name="On start of layout" sid="9095159833357008" type="System" />
             </conditions>
             <actions>
+                <action id="6" name="Stop" sid="6512428559825482" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
                 <action id="0" name="Play" sid="403159033441463" type="Audio">
                     <param id="0" name="Audio file">StandAlone</param>
                     <param id="2" name="Loop">1</param>
