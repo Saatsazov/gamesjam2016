@@ -109,6 +109,10 @@
                     <param id="1" name="Duration">0.4</param>
                     <param id="2" name="Mode">0</param>
                 </action>
+                <action disabled="1" id="-9" name="Set value" sid="5333907412603014" type="System">
+                    <param id="0" name="Variable">apopHealth</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4689669782342249">
@@ -141,20 +145,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="7148188720343293" type="player">
-                    <param id="0" name="Magnitude">20</param>
-                    <param id="1" name="Duration">0.4</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-                <action behavior="CustomMovement" disabled="1" id="12" name="Set enabled" sid="6057145755201726" type="apop">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="CustomMovement" disabled="1" id="6" name="Set angle of motion" sid="2291134980726689" type="apop">
-                    <param id="0" name="Angle">90</param>
-                </action>
-                <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="8749670839758043" type="apop">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">200</param>
+                <action id="4" name="Set animation" sid="8992172092631402" type="apop">
+                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action behavior="Platform" id="11" name="Set enabled" sid="3491257729446632" type="apop">
                     <param id="0" name="State">1</param>
@@ -239,7 +232,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4168349316180439">
+        <event-block disabled="1" sid="4168349316180439">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="3529181943731208" type="playerRangeAttack">
                     <param id="0" name="Object">apop</param>
