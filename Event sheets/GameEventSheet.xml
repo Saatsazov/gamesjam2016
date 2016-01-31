@@ -22,7 +22,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3947535644185031">
+        <event-block disabled="1" sid="3947535644185031">
             <conditions>
                 <condition id="1" name="On any click" sid="9580185152067758" type="Mouse" />
                 <condition id="-14" name="Compare variable" sid="5966444617728966" type="System">
@@ -31,10 +31,7 @@
                     <param id="2" name="Value">&quot;true&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-26" name="Restart layout" sid="8337923423053532" type="System" />
-                <action id="-21" name="Reset global variables" sid="2538795598037656" type="System" />
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="61421752511124">
             <conditions>
@@ -45,14 +42,44 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="2626358266695192" type="gameOverMessage">
+                <action id="-15" name="Set visible" sid="2626358266695192" type="GameOverText">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="8920920973139484" type="GameOverText" />
                 <action id="-9" name="Destroy" sid="4625997190193578" type="player" />
                 <action id="-9" name="Set value" sid="2247687970928105" type="System">
                     <param id="0" name="Variable">isGameOver</param>
                     <param id="1" name="Value">&quot;true&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="3874063560311968">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="1495941133224791" type="GameOverText" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2537517331803136" type="PlayAgaintText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="2163725317226798" type="PlayAgaintText">
+                    <param id="0" name="X">GameOverText.X + 35</param>
+                    <param id="1" name="Y">GameOverText.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9124722986687791">
+            <conditions>
+                <condition id="0" name="On click" sid="107285665910327" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="8585196247814423" type="Mouse">
+                    <param id="0" name="Object">PlayAgaintText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="8337923423053532" type="System" />
+                <action id="-21" name="Reset global variables" sid="2538795598037656" type="System" />
             </actions>
         </event-block>
     </events>

@@ -1426,8 +1426,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>28</x>
-                        <y>13</y>
+                        <x>-322</x>
+                        <y>25</y>
                         <z>0</z>
                         <width>238</width>
                         <height>44</height>
@@ -1465,33 +1465,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="gameOverMessage" uid="25">
-                    <properties>
-                        <text>Игра окончена</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Buxton Sketch,-37.3333,700,0</font>
-                        <color>255,153,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>347</x>
-                        <y>145</y>
-                        <z>0</z>
-                        <width>247</width>
-                        <height>52</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="xyDetect" uid="26">
                     <properties>
                         <text>mouse x y</text>
@@ -1512,6 +1485,71 @@
                         <z>0</z>
                         <width>429</width>
                         <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayAgaintText" uid="46">
+                    <properties>
+                        <text>Играть снова</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-32,400,0</font>
+                        <color>255,153,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>257</x>
+                        <y>-284</y>
+                        <z>0</z>
+                        <width>214</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GameOverText" uid="25">
+                    <properties>
+                        <text>Мир погрузился во мрак</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Buxton Sketch,-37.3333,700,0</font>
+                        <color>51,0,51</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>5</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>278</x>
+                        <y>208</y>
+                        <z>0</z>
+                        <width>357</width>
+                        <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
