@@ -1078,64 +1078,78 @@
                     <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="4534583712292588" speed="0.5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop.png">
                             <collision-poly>
-                                <point x="1" y="0.190234" />
-                                <point x="1" y="0.294764" />
-                                <point x="1" y="0.181425" />
-                                <point x="1" y="0.283871" />
-                                <point x="1" y="1" />
-                                <point x="1" y="0.904968" />
-                                <point x="1" y="0.452596" />
-                                <point x="1" y="0.234418" />
+                                <point x="0.132107" y="0.0853132" />
+                                <point x="0.5" y="0.00647948" />
+                                <point x="0.799331" y="0.12959" />
+                                <point x="0.859532" y="0.5" />
+                                <point x="0.660535" y="0.780778" />
+                                <point x="0.5" y="0.921166" />
+                                <point x="0.153846" y="0.900648" />
+                                <point x="0.602007" y="0.5" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop blink.png">
                             <collision-poly>
-                                <point x="1" y="0.0150862" />
-                                <point x="1" y="0.00538793" />
-                                <point x="1" y="0.130388" />
-                                <point x="1" y="0.509698" />
-                                <point x="1" y="0.774784" />
-                                <point x="1" y="0.904096" />
-                                <point x="1" y="0.622845" />
-                                <point x="1" y="0.306034" />
+                                <point x="0.133333" y="0.0862069" />
+                                <point x="0.5" y="0.0075431" />
+                                <point x="0.798333" y="0.130388" />
+                                <point x="0.858333" y="0.5" />
+                                <point x="0.66" y="0.780172" />
+                                <point x="0.5" y="0.920259" />
+                                <point x="0.155" y="0.899785" />
+                                <point x="0.601667" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="3" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="7056049108371384" speed="1">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="1" y="0.0484914" />
-                                <point x="1" y="0.0980603" />
-                                <point x="1" y="0.128233" />
-                                <point x="1" y="0.491379" />
-                                <point x="1" y="0.808189" />
-                                <point x="1" y="0.917026" />
-                                <point x="1" y="0.864225" />
-                                <point x="1" y="0.511853" />
+                                <point x="0.133333" y="0.0862069" />
+                                <point x="0.5" y="0.0075431" />
+                                <point x="0.798333" y="0.130388" />
+                                <point x="0.858333" y="0.5" />
+                                <point x="0.66" y="0.780172" />
+                                <point x="0.5" y="0.920259" />
+                                <point x="0.155" y="0.899785" />
+                                <point x="0.601667" y="0.5" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.494966" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop spit.png">
                             <collision-poly>
-                                <point x="1" y="0.106681" />
-                                <point x="1" y="0.0366379" />
-                                <point x="1" y="0.146552" />
-                                <point x="1" y="0.502155" />
-                                <point x="1" y="0.759698" />
-                                <point x="1" y="0.884698" />
-                                <point x="1" y="0.820043" />
-                                <point x="1" y="0.621767" />
+                                <point x="0.0352349" y="0.0226293" />
+                                <point x="0.5" y="0.0075431" />
+                                <point x="0.79698" y="0.130388" />
+                                <point x="0.857383" y="0.5" />
+                                <point x="0.657718" y="0.780172" />
+                                <point x="0.5" y="0.917026" />
+                                <point x="0.142617" y="0.908405" />
+                                <point x="0.598993" y="0.5" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop.png">
                             <collision-poly>
-                                <point x="1" y="0.0980603" />
-                                <point x="1" y="0.00862069" />
-                                <point x="1" y="0.101293" />
-                                <point x="1" y="0.510776" />
-                                <point x="1" y="0.787715" />
-                                <point x="1" y="0.920259" />
-                                <point x="1" y="0.881466" />
-                                <point x="1" y="0.498922" />
+                                <point x="0.133333" y="0.0862069" />
+                                <point x="0.5" y="0.0075431" />
+                                <point x="0.798333" y="0.130388" />
+                                <point x="0.858333" y="0.5" />
+                                <point x="0.66" y="0.780172" />
+                                <point x="0.5" y="0.920259" />
+                                <point x="0.155" y="0.899785" />
+                                <point x="0.601667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6565181607888414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Projects\Games\!Global Game Jam\IMG\apop blink.png">
+                            <collision-poly>
+                                <point x="1" y="0.0485961" />
+                                <point x="1" y="0.0345572" />
+                                <point x="1" y="0.151188" />
+                                <point x="1" y="0.556156" />
+                                <point x="1" y="0.841253" />
+                                <point x="1" y="0.938445" />
+                                <point x="1" y="0.87473" />
+                                <point x="1" y="0.530238" />
                             </collision-poly>
                         </frame>
                     </animation>

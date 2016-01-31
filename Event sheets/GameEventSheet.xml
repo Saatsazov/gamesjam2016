@@ -112,8 +112,27 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="9359974911526892">
+        <event-block sid="8902769960763696">
             <conditions>
+                <condition id="-1" name="Every tick" sid="9376101024995683" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="2068598349180686" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5526993470571555" type="player">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4384050154427705">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5804362627791401" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
                 <condition id="1" name="Is overlapping another object" sid="1350928223468343" type="player">
                     <param id="0" name="Object">healingArea</param>
                 </condition>
@@ -124,12 +143,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="2989431407405358" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
                 <action id="-11" name="Add to" sid="5564797460268519" type="player">
                     <param id="0" name="Instance variable">health</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
