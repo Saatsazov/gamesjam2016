@@ -598,6 +598,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="appear" pingpong="0" repeatcount="1" repeatto="0" sid="2594320403628579" speed="1.5">
+                        <frame duration="1" hotspotX="0.501832" hotspotY="0.5" original-source="E:\Project\gamesjam2016\IMG\seth warriors jump.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="monster1Spawner" sid="6081416790853021">

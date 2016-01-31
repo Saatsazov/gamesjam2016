@@ -128,27 +128,6 @@
                     <param id="0" name="Mode">1</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="1477653533079801">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="3667531635217998" type="enemyBoatJumpArea">
-                            <param id="0" name="Object">monster1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="8555970800529684" type="monster1">
-                            <param id="0" name="Instance variable">isHuntingPlayer</param>
-                            <param id="1" name="Value">true</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7705760757544751" type="monster1">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                        <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="8659150124472779" type="monster1">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="681346140606818">
             <conditions>
@@ -208,15 +187,28 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="4754792167290899" type="monster1">
-                    <param id="0" name="Instance variable">isHuntingPlayer</param>
-                    <param id="1" name="Value">true</param>
-                </action>
                 <action behavior="Platform" id="7" name="Simulate control" sid="5632974113563493" type="monster1">
                     <param id="0" name="Control">2</param>
                 </action>
                 <action behavior="Platform" disabled="1" id="11" name="Set enabled" sid="1837746734859955" type="monster1">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="915124735360097" type="monster1">
+                    <param id="0" name="Animation">&quot;appear&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8395511296712185">
+            <conditions>
+                <condition id="4" name="On finished" sid="298741256938725" type="monster1">
+                    <param id="0" name="Animation">&quot;appear&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4754792167290899" type="monster1">
+                    <param id="0" name="Instance variable">isHuntingPlayer</param>
+                    <param id="1" name="Value">true</param>
                 </action>
             </actions>
         </event-block>
