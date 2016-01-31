@@ -68,6 +68,50 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="rostrum" uid="28">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1712.126831055</x>
+                        <y>340.436553955</y>
+                        <z>0</z>
+                        <width>-298.917999268</width>
+                        <height>298.917999268</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="platformForRa" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>801</x>
+                        <y>302</y>
+                        <z>0</z>
+                        <width>153.479629517</width>
+                        <height>106.255134583</height>
+                        <depth>0</depth>
+                        <hotspotX>0.515837133</hotspotX>
+                        <hotspotY>-0.078431375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="cloud1" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -195,40 +239,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="platform" uid="14">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1648.75</x>
-                        <y>426.638061523</y>
-                        <z>0</z>
-                        <width>73</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="deck" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -251,28 +261,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="rostrum" uid="28">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1712.126831055</x>
-                        <y>340.436553955</y>
-                        <z>0</z>
-                        <width>-298.917999268</width>
-                        <height>298.917999268</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="monster1Spawner" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -287,8 +275,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>82</x>
-                        <y>376</y>
+                        <x>128</x>
+                        <y>340</y>
                         <z>0</z>
                         <width>29</width>
                         <height>28</height>
@@ -313,11 +301,6 @@
                         <isHuntingPlayer>1</isHuntingPlayer>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Platform">
                             <properties>
@@ -372,13 +355,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1157</x>
-                        <y>-145</y>
+                        <x>1164.758056641</x>
+                        <y>-144.044952393</y>
                         <z>0</z>
-                        <width>16</width>
-                        <height>13</height>
+                        <width>31</width>
+                        <height>55</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.300000012</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -398,8 +381,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2154</x>
-                        <y>385</y>
+                        <x>2101</x>
+                        <y>363</y>
                         <z>0</z>
                         <width>29</width>
                         <height>28</height>
@@ -426,11 +409,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>941.937866211</x>
-                        <y>-144.062164307</y>
+                        <x>965.114868164</x>
+                        <y>-138.639404297</y>
                         <z>0</z>
-                        <width>12.124355316</width>
-                        <height>12.124355316</height>
+                        <width>37</width>
+                        <height>57</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -455,10 +438,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>793</x>
-                        <y>335</y>
+                        <x>798.43359375</x>
+                        <y>345.86706543</y>
                         <z>0</z>
-                        <width>115</width>
+                        <width>124.660827637</width>
                         <height>19</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -480,20 +463,15 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>529.076599121</x>
-                        <y>306.90322876</y>
+                        <x>566.218444824</x>
+                        <y>331.7762146</y>
                         <z>0</z>
-                        <width>160</width>
-                        <height>111</height>
+                        <width>191</width>
+                        <height>27</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -514,19 +492,14 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1686.768066406</x>
-                        <y>325.993041992</y>
+                        <x>1688.328857422</x>
+                        <y>331.786437988</y>
                         <z>0</z>
-                        <width>162</width>
+                        <width>174</width>
                         <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -544,11 +517,6 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -578,11 +546,6 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -934,8 +897,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>859</x>
-                        <y>507.161224365</y>
+                        <x>1022</x>
+                        <y>507</y>
                         <z>0</z>
                         <width>19</width>
                         <height>94.32244873</height>
@@ -956,8 +919,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1414</x>
-                        <y>514.577270508</y>
+                        <x>1298.73425293</x>
+                        <y>515.980773926</y>
                         <z>0</z>
                         <width>19</width>
                         <height>125.15447998</height>
@@ -1056,28 +1019,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="platformForRa" uid="31">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>798.242004395</x>
-                        <y>285.162506104</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>122</height>
-                        <depth>0</depth>
-                        <hotspotX>0.515837133</hotspotX>
-                        <hotspotY>-0.078431375</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="platformForRa" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1088,11 +1029,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1433.123046875</x>
-                        <y>285.933502197</y>
+                        <x>1410.611450195</x>
+                        <y>321.319396973</y>
                         <z>0</z>
-                        <width>134</width>
-                        <height>124</height>
+                        <width>142.240005493</width>
+                        <height>98.473854065</height>
                         <depth>0</depth>
                         <hotspotX>0.515837133</hotspotX>
                         <hotspotY>-0.078431375</hotspotY>
@@ -1179,10 +1120,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>658.778442383</x>
-                        <y>493</y>
+                        <x>733</x>
+                        <y>479</y>
                         <z>0</z>
-                        <width>18.049987793</width>
+                        <width>52</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1204,124 +1145,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>538.996704102</x>
-                        <y>368.03414917</y>
+                        <x>569.125305176</x>
+                        <y>425.359863281</y>
                         <z>0</z>
-                        <width>66.04271698</width>
-                        <height>104.273208618</height>
+                        <width>28</width>
+                        <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-0.014078134</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="platform" uid="46">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>576.196533203</x>
-                        <y>422.552886963</y>
-                        <z>0</z>
-                        <width>26.813045502</width>
-                        <height>67.557617188</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemyBoatJumpArea" uid="48">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>722.337158203</x>
-                        <y>493.631439209</y>
-                        <z>0</z>
-                        <width>20.854248047</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemyBoatJumpArea" uid="49">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>801.451904297</x>
-                        <y>492.931518555</y>
-                        <z>0</z>
-                        <width>21</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemyBoatJumpArea" uid="47">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1450.075561523</x>
-                        <y>490.349121094</y>
-                        <z>0</z>
-                        <width>18.049987793</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>-1.606099725</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1335,37 +1171,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1513.634155273</x>
-                        <y>490.980560303</y>
+                        <x>1529</x>
+                        <y>492</y>
                         <z>0</z>
-                        <width>20.854248047</width>
-                        <height>64</height>
+                        <width>62</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="enemyBoatJumpArea" uid="51">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1571</x>
-                        <y>489</y>
-                        <z>0</z>
-                        <width>-70</width>
-                        <height>26</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1408,11 +1222,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1101</x>
-                        <y>420.210449219</y>
+                        <x>1143.5</x>
+                        <y>429.920898438</y>
                         <z>0</z>
-                        <width>1343</width>
-                        <height>18.579071045</height>
+                        <width>1170</width>
+                        <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1437,8 +1251,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1430.126831055</x>
-                        <y>336.436553955</y>
+                        <x>1406.581542969</x>
+                        <y>361.190917969</y>
                         <z>0</z>
                         <width>115</width>
                         <height>19</height>
@@ -1542,6 +1356,35 @@
                         <z>0</z>
                         <width>22.494443893</width>
                         <height>22.494443893</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="platform" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1673.743164063</x>
+                        <y>431.195648193</y>
+                        <z>0</z>
+                        <width>105</width>
+                        <height>39</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1664,36 +1507,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>373</x>
-                        <y>72</y>
+                        <x>404</x>
+                        <y>-141</y>
                         <z>0</z>
-                        <width>649</width>
+                        <width>429</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="protectionFromFall" uid="53">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1161</x>
-                        <y>434.5</y>
-                        <z>0</z>
-                        <width>1872</width>
-                        <height>37</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

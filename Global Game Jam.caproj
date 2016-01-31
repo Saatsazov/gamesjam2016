@@ -446,9 +446,6 @@
                     <behavior-type name="Solid" sid="3614366900289677">
                         <behavior id="solid" />
                     </behavior-type>
-                    <behavior-type name="Jumpthru" sid="8028411742839882">
-                        <behavior id="jumpthru" />
-                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268901826072253" speed="5">
@@ -477,86 +474,29 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="1557708376865053" speed="5">
-                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_pose_0000_Move.png">
-                            <collision-poly>
-                                <point x="0.408945" y="0.00464037" />
-                                <point x="0.769968" y="0" />
-                                <point x="0.73163" y="1" />
-                                <point x="0.415336" y="1" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_pose_0000_Move.png" />
                     </animation>
                     <animation framecount="2" loop="1" name="go" pingpong="1" repeatcount="1" repeatto="0" sid="3984311979093842" speed="5">
-                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
-                            <collision-poly>
-                                <point x="0.376997" y="1" />
-                                <point x="0.364217" y="0" />
-                                <point x="0.776358" y="0" />
-                                <point x="0.763578" y="0.990719" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116">
-                            <collision-poly>
-                                <point x="0.415335" y="0" />
-                                <point x="0.763578" y="0" />
-                                <point x="0.693291" y="1" />
-                                <point x="0.408946" y="1" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" />
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" />
                     </animation>
                     <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="2146921579121159" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501166" original-source="E:\Project\gamesjam2016\IMG\Ra_jump_0000_Move.png">
-                            <collision-poly>
-                                <point x="0.415094" y="0" />
-                                <point x="0.761006" y="0.004662" />
-                                <point x="0.716981" y="1" />
-                                <point x="0.440252" y="0.986014" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501166" original-source="E:\Project\gamesjam2016\IMG\Ra_jump_0000_Move.png" />
                     </animation>
                     <animation framecount="2" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="9006707916402867" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_fight_0000_Move.png">
-                            <collision-poly>
-                                <point x="0.409091" y="0" />
-                                <point x="0.753247" y="0" />
-                                <point x="0.694805" y="1" />
-                                <point x="0.435065" y="1" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_fight_0000_Move.png" />
                         <frame duration="1" hotspotX="0.500935" hotspotY="0.50116" original-source="E:\Project\gamesjam2016\IMG\Ra_fight_0001_Move.png">
                             <collision-poly>
                                 <point x="0.396262" y="0" />
                                 <point x="0.637383" y="0" />
-                                <point x="0.6" y="1" />
-                                <point x="0.426168" y="1" />
+                                <point x="0.745795" y="1" />
+                                <point x="0.328972" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="cry" pingpong="0" repeatcount="1" repeatto="0" sid="1031393583180275" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png">
-                            <collision-poly>
-                                <point x="0.295598" y="0" />
-                                <point x="0.701258" y="0" />
-                                <point x="0.899371" y="0.241299" />
-                                <point x="1" y="0.614849" />
-                                <point x="0.808176" y="1" />
-                                <point x="0.374214" y="1" />
-                                <point x="0.27673" y="0.770302" />
-                                <point x="0.251572" y="0.429234" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png">
-                            <collision-poly>
-                                <point x="0.258786" y="0.025522" />
-                                <point x="0.71885" y="0.0510441" />
-                                <point x="0.926518" y="0.276102" />
-                                <point x="1" y="0.612529" />
-                                <point x="0.795527" y="0.99768" />
-                                <point x="0.329073" y="1" />
-                                <point x="0.268371" y="0.805104" />
-                                <point x="0.261981" y="0.412993" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png" />
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.50116" original-source="E:\Projects\Games\!Global Game Jam\IMG\Ra_pose_0000_Move.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -575,9 +515,6 @@
                     <instance-variable name="isHuntingPlayer" sid="1585230126886897" type="number" />
                 </instance-variables>
                 <behaviors>
-                    <behavior-type name="Solid" sid="8581531616972675">
-                        <behavior id="solid" />
-                    </behavior-type>
                     <behavior-type name="DestroyOutsideLayout" sid="2488201601295309">
                         <behavior id="destroy" />
                     </behavior-type>
@@ -684,7 +621,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128313884580452" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.3" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -832,14 +769,12 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1443524131559528" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502283" original-source="E:\Projects\Games\!Global Game Jam\IMG\seth warrior boat.png">
                             <collision-poly>
-                                <point x="0.342392" y="0.502283" />
-                                <point x="0.5" y="0.52968" />
-                                <point x="0.709239" y="0.506849" />
-                                <point x="0.847826" y="0.383562" />
-                                <point x="0.880435" y="0.680365" />
+                                <point x="0.269022" y="0.497717" />
+                                <point x="0.839674" y="0.509132" />
+                                <point x="0.921196" y="0.269407" />
+                                <point x="0.899457" y="0.714611" />
                                 <point x="0.293478" y="0.69863" />
                                 <point x="0.160326" y="0.347032" />
-                                <point x="0.247283" y="0.429224" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -877,14 +812,6 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2702181559172983" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="protectionFromFall" sid="6602262530556078">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3614701106067333" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
