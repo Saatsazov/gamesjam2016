@@ -4,7 +4,7 @@
     <name>MonsterSpawnLogic</name>
     <events>
         <variable constant="0" name="killedMonstersCount" sid="1960814841486422" static="0" type="number">0</variable>
-        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">20</variable>
+        <variable constant="0" name="requiredMonsterKills" sid="6344929221386274" static="0" type="number">10</variable>
         <variable constant="0" name="maxEnemyBoatCount" sid="3108387997488043" static="0" type="number">2</variable>
         <variable constant="0" name="enemyBoatCount" sid="9378635271055483" static="0" type="number">0</variable>
         <variable constant="0" name="monsters1Count" sid="2686046266230562" static="0" type="number">0</variable>

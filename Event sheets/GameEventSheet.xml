@@ -107,7 +107,7 @@
                 <action id="0" name="Play" sid="403159033441463" type="Audio">
                     <param id="0" name="Audio file">StandAlone</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-20</param>
+                    <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
