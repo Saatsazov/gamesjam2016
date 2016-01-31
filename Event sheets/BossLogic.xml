@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="isBossAppeared" sid="7822511655592905" static="0" type="number">0</variable>
         <variable constant="0" name="wasOnPosition1" sid="8218003792687852" static="0" type="number">0</variable>
-        <variable constant="0" name="apopHealth" sid="5280311895144543" static="0" type="number">10</variable>
+        <variable constant="0" name="apopHealth" sid="5280311895144543" static="0" type="number">100</variable>
         <variable constant="0" name="apopAttackValue" sid="6959854013706912" static="0" type="number">25</variable>
         <event-block sid="1886503342135319">
             <conditions>
@@ -101,7 +101,7 @@
             <actions>
                 <action id="-11" name="Subtract from" sid="3426936119555482" type="System">
                     <param id="0" name="Variable">apopHealth</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">15</param>
                 </action>
                 <action id="-9" name="Destroy" sid="9794793131257115" type="apopAttack" />
                 <action behavior="ScrollTo" id="0" name="Shake" sid="9562236747249856" type="player">
@@ -267,6 +267,27 @@
                 <action id="-3" name="Set position" sid="7380555101583964" type="apop">
                     <param id="0" name="X">1740</param>
                     <param id="1" name="Y">1008</param>
+                </action>
+                <action id="-3" name="Set position" sid="8720237883602275" type="apopAtackSource">
+                    <param id="0" name="X">1633</param>
+                    <param id="1" name="Y">828</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6129584031221483" type="apopAtackSource">
+                    <param id="0" name="Pin to">apop</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6158225306436509">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3082832164460118" type="playerRangeAttack">
+                    <param id="0" name="Object">apop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="3133063116677546" type="System">
+                    <param id="0" name="Variable">apopHealth</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
