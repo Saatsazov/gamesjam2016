@@ -81,9 +81,6 @@
                         <action id="7" name="Set mirrored" sid="5684077797051325" type="player">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="3165842654729587" type="playerCryAoe">
-                            <param id="0" name="State">0</param>
-                        </action>
                         <action id="7" name="Set mirrored" sid="3532858689307423" type="playerRangeAttackSource">
                             <param id="0" name="State">0</param>
                         </action>
@@ -99,9 +96,6 @@
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="5754300240387017" type="player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="2974916904833732" type="playerCryAoe">
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="331481859786725" type="playerRangeAttackSource">
@@ -401,7 +395,7 @@
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="4657583624102523" type="playerCryAoe">
                     <param id="0" name="Pin to">player</param>
-                    <param id="1" name="Mode">0</param>
+                    <param id="1" name="Mode">1</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="146543322067919" type="playerRangeAttackSource">
                     <param id="0" name="Pin to">player</param>

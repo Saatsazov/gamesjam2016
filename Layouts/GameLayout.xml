@@ -298,6 +298,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="platformForASun" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1118.126831055</x>
+                        <y>287.436553955</y>
+                        <z>0</z>
+                        <width>342.252563477</width>
+                        <height>260.111968994</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500952363</hotspotX>
+                        <hotspotY>0.501253128</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="rostrum" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -950,14 +972,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1115.829101563</x>
-                        <y>186.119247437</y>
+                        <x>1108.329467773</x>
+                        <y>185.806838989</y>
                         <z>0</z>
                         <width>133.11618042</width>
                         <height>64.815338135</height>
                         <depth>0</depth>
-                        <hotspotX>1.139999986</hotspotX>
-                        <hotspotY>0.472000003</hotspotY>
+                        <hotspotX>-0.075999998</hotspotX>
+                        <hotspotY>0.463999987</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
                     </world>
@@ -1199,28 +1221,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>-1.857142806</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="platformForASun" uid="30">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1118.126831055</x>
-                        <y>287.436553955</y>
-                        <z>0</z>
-                        <width>342.252563477</width>
-                        <height>260.111968994</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500952363</hotspotX>
-                        <hotspotY>0.501253128</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
