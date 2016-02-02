@@ -311,7 +311,7 @@
                 <condition id="-7" name="Compare instance variable" sid="6047034140678869" type="eye">
                     <param id="0" name="Instance variable">isKilledByPlayer</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">true</param>
                 </condition>
             </conditions>
             <actions>
@@ -356,6 +356,10 @@
                     <param id="1" name="Value">10</param>
                 </action>
                 <action id="-9" name="Destroy" sid="9917117581701332" type="eyeAttack" />
+                <action id="4" name="Set animation" sid="2392118162689164" type="sunBored">
+                    <param id="0" name="Animation">&quot;scared&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9964621098026204">
@@ -366,9 +370,13 @@
             </conditions>
             <actions>
                 <action disabled="1" id="-9" name="Destroy" sid="2377006948765325" type="eye" />
-                <action id="-10" name="Add to" sid="9221376633772821" type="System">
+                <action disabled="1" id="-10" name="Add to" sid="9221376633772821" type="System">
                     <param id="0" name="Variable">killedMonstersCount</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8867728782745849" type="eye">
+                    <param id="0" name="Instance variable">isKilledByPlayer</param>
+                    <param id="1" name="Value">true</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="9559012475956836" type="eye">
                     <param id="0" name="Speed">0</param>

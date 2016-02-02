@@ -66,6 +66,11 @@
                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="8508430059810644" type="sunBored">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="-10" name="Set value" sid="5942941570891897" type="monster1">
+                    <param id="0" name="Instance variable">isHuntingPlayer</param>
+                    <param id="1" name="Value">false</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3581788115375761" type="monster1Spawner" />
             </actions>
         </event-block>
         <event-block sid="3874063560311968">
