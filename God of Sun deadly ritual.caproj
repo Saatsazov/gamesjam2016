@@ -559,10 +559,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TiledBackground2" sid="5696233255102639">
-                <plugin id="TiledBg" />
-                <texture original-source="E:\Projects\Games\!Global Game Jam\IMG\Title_background.png" />
-            </object-type>
         </object-folder>
         <object-folder name="Game">
             <object-type name="platform" sid="5505656349022332">
